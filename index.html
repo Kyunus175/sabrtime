@@ -180,12 +180,21 @@ function showDua(mood) {
 }
 
 function shareDua() {
-    if(currentDua==""){
-        alert("Please select a mood first");
-        return;
-    }
-    let text = "🤲 This helped me today:\n" + currentDua + "\nShared from SabrTime";
-    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text), "_blank");
+
+if(currentDua==""){
+alert("Please select a mood first");
+return;
+}
+
+let text = "🤲 This helped me today:\n\n" 
++ currentDua 
++ "\n\nTry SabrTime:\n\nhttps://kyunus175.github.io/sabrtime/";
+
+window.open(
+"https://api.whatsapp.com/send?text=" + encodeURIComponent(text),
+"_blank"
+);
+
 }
 
 function startTimer(){
