@@ -170,6 +170,10 @@ button.share:hover {
 <h1>SabrTime</h1>
 <p>Find peace through Islamic duas and reflection 🤲</p>
 
+<p id="streakCounter" style="font-size:16px; color:#ff6600;"></p>
+
+<h3>📿 Daily Dua</h3>
+<p id="dailyDua" style="font-size:18px; color:#d6f3f0;"></p>
 <h3>Select your mood</h3>
 <button class="mood" onclick="showDua('stress')">😔 Stressed</button>
 
@@ -281,6 +285,23 @@ function resetTasbeeh() {
   tasbeehCount = 0;
   document.getElementById("tasbeeh-count").innerHTML = tasbeehCount;
 }
+// Streak Tracker
+const lastVisit = localStorage.getItem("lastVisit");
+const todayDate = new Date().toDateString();
+let streak = parseInt(localStorage.getItem("streak") || "0");
+
+if(lastVisit !== todayDate){
+  streak += 1;
+  localStorage.setItem("streak", streak);
+  localStorage.setItem("lastVisit", todayDate);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const streakElement = document.getElementById("streakCounter");
+  if(streakElement){
+    streakElement.innerText = `🔥 Your Streak: ${streak} day(s)`;
+  }
+});
 </script>
 </body>
 </html>
