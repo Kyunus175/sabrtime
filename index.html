@@ -157,6 +157,44 @@ button.share:hover {
 <button class="mood" onclick="startTimer()">Start 60s Sabr</button>
 <div class="timer" id="timer">60 sec</div>
 
+    <h3>Tasbeeh Counter</h3>
+<p>Click the button to count your dhikr</p>
+
+<div class="tasbeeh-counter">
+  <button onclick="incrementTasbeeh()">🤲 Tasbeeh</button>
+  <div id="tasbeeh-count">0</div>
+  <button onclick="resetTasbeeh()">🔄 Reset</button>
+</div>
+    .tasbeeh-counter {
+  margin: 25px;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tasbeeh-counter button {
+  background: #f39c12;
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.tasbeeh-counter button:hover {
+  background: #d35400;
+}
+
+#tasbeeh-count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #d6f3f0;
+}
+    
 <div id="counter">Reflections completed: 0</div>
 
 <!-- Inline JS -->
@@ -225,5 +263,17 @@ function startTimer(){
 }
 </script>
 
+    let tasbeehCount = 0;
+
+function incrementTasbeeh() {
+  tasbeehCount++;
+  document.getElementById("tasbeeh-count").innerHTML = tasbeehCount;
+}
+
+function resetTasbeeh() {
+  tasbeehCount = 0;
+  document.getElementById("tasbeeh-count").innerHTML = tasbeehCount;
+}
+    
 </body>
 </html>
