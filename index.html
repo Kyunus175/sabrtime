@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SabrTime – Peace for Your Heart</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" sizes="512x512" href="logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+
+<meta name="description" content="SabrTime helps you find the right dua based on your mood. Calm your heart with Islamic reminders.">
+<meta property="og:title" content="SabrTime – Peace for Your Heart">
+<meta property="og:description" content="Feeling sad, stressed, or grateful? Get the perfect dua instantly.">
+<meta property="og:url" content="https://kyunus175.github.io/sabrtime/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(180deg, #021b1f, #063a40);
+    color: #fff;
+}
+
+.logo { font-size: 60px; margin-top: 20px; }
+h1 { font-size: 42px; margin-top: 30px; color: #1abc9c; text-shadow: 0 0 10px rgba(26, 188, 156, 0.7); }
+p { font-size: 18px; margin-bottom: 20px; color: #d6f3f0; }
+
+button.mood, button.share, .tasbeeh-counter button, .tasbeeh-box button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.mood {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    margin: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+button.mood:hover { background: linear-gradient(135deg, #16a085, #1abc9c); transform: translateY(-3px); }
+
+button.share {
+    background: linear-gradient(135deg, #f39c12, #d35400);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+button.share:hover { background: linear-gradient(135deg, #d35400, #f39c12); transform: translateY(-3px); }
+
+.dua-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+.daily-dua-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #d6f3f0;
+    margin-top: 10px;
+}
+
+.timer {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.3);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#streakCounter { font-size: 16px; color: #ff6600; margin-bottom: 15px; }
+
+/* Local Tasbeeh Counter */
+.tasbeeh-counter {
+  margin: 30px auto;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  max-width: 300px;
+}
+
+.tasbeeh-counter button {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.tasbeeh-counter button:hover {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+#tasbeeh-count {
+  font-size: 32px;
+  font-weight: bold;
+  color: #d6f3f0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.share-card {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px 25px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #20b486, #1f9e85);
+  text-align: center;
+  color: white;
+}
+
+.share-card p { font-size: 28px; line-height: 1.6; }
+.share-card h3 { font-size: 36px; }
+
+.tasbeeh-box {
+  text-align:center;
+  padding:30px;
+  margin-top:40px;
+  background:#f4fff9;
+  border-radius:20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Global Tasbeeh Counter */
+.tasbeeh-box {
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  background: rgba(32, 180, 134, 0.1); /* subtle green */
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tasbeeh-box h2 {
+  font-size: 28px;
+  color: #20b486;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#globalTasbeeh {
+  font-size: 60px;
+  font-weight: bold;
+  color: #20b486;
+  margin: 10px 0 20px 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.tasbeeh-box button{
+  padding:15px 30px;
+  font-size:18px;
+  background:#20b486;
+  color:white;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+  transition: 0.2s;
+}
+
+.tasbeeh-box button:hover{
+  background:#1f9e85;
+}
+
+@media (max-width: 600px) {
+  .share-card { width: 95%; padding: 30px 20px; }
+  .share-card p { font-size: 24px; }
+  .share-card h3 { font-size: 30px; }
+}
+.streak-badge {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  display:inline-block;
+  margin-top:10px;
+  background: rgba(255,255,255,0.3);
+  border-radius:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="logo">🕌</div>
+<h1>SabrTime</h1>
+<p>Find peace through Islamic duas and reflection 🤲</p>
+<p id="streakCounter"></p>
+
+<!-- Daily Dua Card -->
+<div class="dua-card">
+  <h3>📿 Daily Dua</h3>
+  <div id="dailyDua" class="daily-dua-text">Loading dua...</div>
+</div>
+
+<!-- Global Digital Tasbeeh Counter -->
+<div class="tasbeeh-box">
+  <h2>📿 Global Digital Tasbeeh</h2>
+  <h1 id="globalTasbeeh">0</h1>
+  <button onclick="addTasbeeh()">+ Add Tasbeeh</button>
+</div>
+
+<!-- Mood Buttons -->
+<h3>Select your mood</h3>
+<button class="mood" onclick="showDua('stress')">😔 Stressed</button>
+<button class="mood" onclick="showDua('sad')">😢 Sad</button>
+<button class="mood" onclick="showDua('happy')">😊 Happy</button>
+<button class="mood" onclick="showDua('anger')">😡 Angry</button>
+<button class="mood" onclick="showDua('fear')">😨 Fear</button>
+<button class="mood" onclick="showDua('anxiety')">😰 Anxiety</button>
+<button class="mood" onclick="showDua('sickness')">🤒 Sick</button>
+<button class="mood" onclick="showDua('forgiveness')">🤲 Forgiveness</button>
+
+<div id="dua"></div>
+<button class="share" onclick="shareDua()">Share this Dua</button>
+
+<!-- Reflection Timer -->
+<h3>Reflection Timer</h3>
+<button class="mood" onclick="startTimer()">Start 60s Sabr</button>
+<div class="timer" id="timer">60 sec</div>
+<div id="counter">Reflections completed: 0</div>
+
+<!-- Local Tasbeeh Counter -->
+<h3>Tasbeeh Counter</h3>
+<p>Click the button to count your dhikr</p>
+<div class="tasbeeh-counter">
+  <button onclick="incrementTasbeeh()">🤲 Tasbeeh</button>
+  <div id="tasbeeh-count">0</div>
+  <button onclick="resetTasbeeh()">🔄 Reset</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+// ======================== Mood-based Duas ========================
+let currentDua = "";
+let reflectionCount = 0;
+
+const duas = {
+  stress: "Indeed, with hardship comes ease. (Quran 94:6)",
+  sad: "Allahumma inni a'udhu bika minal hammi wal hazan.",
+  happy: "Alhamdulillah! Gratitude increases blessings.",
+  anger: "A'udhu billahi min ash-shaytan ir-rajim.",
+  fear: "Hasbunallahu wa ni'mal wakeel.",
+  anxiety: "Allahumma la sahla illa ma ja'altahu sahla.",
+  sickness: "Allahumma rabban-nas adhhib al-ba'sa washfi anta ash-shafi.",
+  forgiveness: "Astaghfirullah wa atubu ilayh."
+};
+
+function showDua(mood) {
+    currentDua = duas[mood];
+    document.getElementById("dua").innerText = currentDua;
+}
+
+function shareDua() {
+    if(currentDua==""){
+        alert("Please select a mood first");
+        return;
+    }
+    let text = "🤲 This helped me today:\n\n" + currentDua + "\n\nTry SabrTime:\n\nhttps://kyunus175.github.io/sabrtime/";
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text), "_blank");
+}
+
+// ======================== Reflection Timer ========================
+function startTimer(){
+    let time = 60;
+    document.getElementById("timer").innerText = time + " sec";
+    let interval = setInterval(function(){
+        time--;
+        document.getElementById("timer").innerText = time + " sec";
+        if(time < 0){
+            clearInterval(interval);
+            document.getElementById("timer").innerText = "Reflection complete 🤲";
+            reflectionCount++;
+            document.getElementById("counter").innerText = "Reflections completed: " + reflectionCount;
+        }
+    }, 1000);
+}
+
+// ======================== Local Tasbeeh Counter ========================
+let tasbeehCount = 0;
+function incrementTasbeeh() { tasbeehCount++; document.getElementById("tasbeeh-count").innerText = tasbeehCount; }
+function resetTasbeeh() { tasbeehCount = 0; document.getElementById("tasbeeh-count").innerText = tasbeehCount; }
+
+// ======================== Daily Duas ========================
+const dailyDuas = [
+"اللّهُمّ اجعلني من الذاكرين",
+"Astaghfirullah wa atubu ilayh",
+"Alhamdulillah! Gratitude increases blessings.",
+"اللّهُمّ اهدني",
+"Rabbi inni lima anzalta ilayya min khayrin faqir",
+"رَبِّ اجعلني مقيم الصلاة ومن ذريتي",
+"اللّهُمّ اغفر لي ولوالديّ وللمؤمنين والمؤمنات",
+"أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه",
+"اللّهُمّ اجعلني من التوابين واجعلني من المتطهرين",
+"رَبِّ اجعل هذا المكان آمناً ومباركاً",
+"اللّهُمّ أعني على ذكرك وشكرك وحسن عبادتك",
+"رَبِّ اجعل قلبي مطمئناً بذكرك",
+"اللّهُمّ اجعلني شاكرًا على نعمك",
+"رَبِّ زِدْنِي علمًا ونورًا",
+"Astaghfirullah al-azim wa atubu ilayh",
+"اللّهُمّ اجعل عملي خالصًا لوجهك",
+"رَبِّ ارزقني قلبًا خاشعًا",
+"اللّهُمّ اجعلني من عبادك الصالحين",
+"رَبِّ اجعلني قويًا في صبرك",
+"اللّهُمّ اجعل لي نورًا في قلبي",
+"Astaghfirullah wa tawbatu ilayk",
+"اللّهُمّ اجعلني ممن يستمعون القول فيتبعون أحسنه",
+"رَبِّ اجعلني قريبًا منك",
+"اللّهُمّ اجعلني من أهل الجنة",
+"رَبِّ اجعلني شاكرًا ومتوكلًا عليك",
+"اللّهُمّ اجعلني من الذين يذكرونك دائمًا",
+"Astaghfirullah wa atubu ilayh",
+"رَبِّ اجعل قلبي مطمئنًا بذكرك",
+"اللّهُمّ اجعلني ممن تحب وترضى عنهم",
+"رَبِّ اجعلني من عبادك المخلصين"
+];
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dailyDuaElement = document.getElementById("dailyDua");
+    if(dailyDuaElement){
+        const today = new Date();
+        const duaIndex = today.getDate() - 1;
+        dailyDuaElement.innerText = dailyDuas[duaIndex];
+    }
+});
+
+// ======================== Streak Tracker ========================
+document.addEventListener("DOMContentLoaded", function() {
+    const lastVisit = localStorage.getItem("lastVisit");
+    const todayDate = new Date().toDateString();
+    let streak = parseInt(localStorage.getItem("streak") || "0");
+    if(lastVisit !== todayDate){
+        streak += 1;
+        localStorage.setItem("streak", streak);
+        localStorage.setItem("lastVisit", todayDate);
+    }
+    const streakElement = document.getElementById("streakCounter");
+    if(streakElement){
+        streakElement.innerText = `🔥 Your Streak: ${streak} day(s)`;
+    }
+});
+
+// ======================== Shareable Dua Image ========================
+function generateShareCard() {
+    const dailyDuaText = document.getElementById("dailyDua").innerText;
+    const streak = localStorage.getItem("streak") || "0";
+
+    const card = document.createElement("div");
+    card.className = "share-card";
+    card.innerHTML = `
+        <h3>📿 Daily Dua</h3>
+        <p>${dailyDuaText}</p>
+        <div class="streak-badge">🔥 Streak: ${streak} day(s)</div>
+        <p style="margin-top:20px;font-size:16px;">SabrTime 🌙</p>
+    `;
+    document.body.appendChild(card);
+
+    html2canvas(card).then(async function(canvas){
+        canvas.toBlob(async function(blob){
+            const file = new File([blob], "SabrTime_Dua.png", { type: "image/png" });
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: "SabrTime Daily Dua", text: "This dua helped me today 🤲", files: [file] });
+                } catch(e){ console.log("Share cancelled"); }
+            } else {
+                const link = document.createElement("a");
+                link.href = canvas.toDataURL("image/png");
+                link.download = "SabrTime_Dua.png";
+                link.click();
+            }
+            card.remove();
+        });
+    });
+}
+
+// Add Share Image Button
+document.addEventListener("DOMContentLoaded", function(){
+    const existingShareBtn = document.querySelector("button.share");
+    if(existingShareBtn){
+        const shareButton = document.createElement("button");
+        shareButton.innerText = "📸 Share Dua Image";
+        shareButton.className = "share";
+        shareButton.style.marginTop = "10px";
+        shareButton.onclick = generateShareCard;
+        existingShareBtn.insertAdjacentElement("afterend", shareButton);
+    }
+});
+</script>
+
+<!-- ======================== Firebase: Global Tasbeeh ======================== -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAscIv50HTDL-9LBZdy1kq3h0fhAja_7QA",
+    authDomain: "sabrtime-tasbeeh.firebaseapp.com",
+    databaseURL: "https://sabrtime-tasbeeh-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    projectId: "sabrtime-tasbeeh",
+    storageBucket: "sabrtime-tasbeeh.firebasestorage.app",
+    messagingSenderId: "905107764407",
+    appId: "1:905107764407:web:6af499a379c3928df70932"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  var tasbeehRef = firebase.database().ref("globalTasbeeh");
+
+  tasbeehRef.on("value", function(snapshot){
+    document.getElementById("globalTasbeeh").innerText = snapshot.val() || 0;
+  });
+
+  function addTasbeeh(){
+    tasbeehRef.transaction(function(count){
+      return (count || 0) + 1;
+    });
+  }
+</script>
+
+</body>
+</html>
