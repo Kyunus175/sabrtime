@@ -1,5 +1,5 @@
 // SabrTime Service Worker v3.0
-const CACHE_NAME = 'sabrtime-v13';
+const CACHE_NAME = 'sabrtime-v14';
 const URLS_TO_CACHE = [
   '/sabrtime/',
   '/sabrtime/index.html',
