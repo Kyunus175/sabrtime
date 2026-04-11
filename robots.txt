@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kyunus175.github.io/sabrtime/sitemap.xml
+
+# Disallow unnecessary files
+Disallow: /sw.js
