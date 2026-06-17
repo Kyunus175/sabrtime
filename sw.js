@@ -1,7 +1,7 @@
 // SabrTime Service Worker v11
 // Strategy: Cache-First for static, Stale-While-Revalidate for duas
 
-const CACHE_NAME = 'sabrtime-v16';
+const CACHE_NAME = 'sabrtime-v17';
 const STATIC_ASSETS = [
   '/sabrtime/',
   '/sabrtime/index.html',
