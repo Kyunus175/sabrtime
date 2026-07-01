@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://sabrtime.in/sitemap.xml
-
-# Disallow unnecessary files
-Disallow: /sw.js
