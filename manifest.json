@@ -1,0 +1,53 @@
+{
+  "name": "SabrTime — Peace for Your Heart",
+  "short_name": "SabrTime",
+  "description": "Free Islamic app — 200+ duas, prayer times, tasbeeh counter, mood guidance. No download needed.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1a1208",
+  "background_color": "#1a1208",
+  "orientation": "portrait",
+  "categories": ["lifestyle", "education", "religion"],
+  "lang": "en",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='0' fill='%231a1208'/%3E%3Ctext y='0.9em' font-size='380' x='50%25' text-anchor='middle'%3E%F0%9F%95%8C%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='22' fill='%231a1208'/%3E%3Ctext y='0.9em' font-size='140' x='50%25' text-anchor='middle'%3E%F0%9F%95%8C%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Dua",
+      "short_name": "Dua",
+      "description": "Open today's dua",
+      "url": "/#dua",
+      "icons": [{"src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Ctext y='0.9em' font-size='72'%3E%F0%9F%A4%B2%3C/text%3E%3C/svg%3E", "sizes": "96x96"}]
+    },
+    {
+      "name": "Tasbeeh Counter",
+      "short_name": "Tasbeeh",
+      "description": "Count your dhikr",
+      "url": "/#dhikr",
+      "icons": [{"src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Ctext y='0.9em' font-size='72'%3E%F0%9F%93%BF%3C/text%3E%3C/svg%3E", "sizes": "96x96"}]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 844'%3E%3Crect width='390' height='844' fill='%231a1208'/%3E%3Ctext x='195' y='422' text-anchor='middle' fill='%23c9963a' font-size='48'%3ESabrTime%3C/text%3E%3C/svg%3E",
+      "sizes": "390x844",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "SabrTime Home Screen"
+    }
+  ]
+}
