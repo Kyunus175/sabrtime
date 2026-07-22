@@ -1,0 +1,46 @@
+name: Build & Deploy SEO Toolkit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'seo-toolkit-src/**'
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: seo-toolkit-src/package-lock.json
+
+      - name: Install dependencies
+        working-directory: seo-toolkit-src
+        run: npm install
+
+      - name: Build SEO Toolkit
+        working-directory: seo-toolkit-src
+        run: npm run build
+
+      - name: Replace seo-tools/ with new build
+        run: |
+          rm -rf seo-tools
+          cp -r seo-toolkit-src/dist seo-tools
+
+      - name: Commit and push updated build
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add seo-tools/
+          git diff --staged --quiet && echo "No changes to commit" || (git commit -m "chore: rebuild SEO toolkit [skip ci]" && git push)
