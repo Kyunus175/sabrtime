@@ -4,10 +4,12 @@ import { tools } from '@/tools';
 import { ToolCard } from '@/components/ToolCard';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Sparkles, Zap, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Search, Sparkles, Zap, ShieldCheck, ArrowRight, Heart, ExternalLink } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { UsageIndicator } from '@/components/UsageIndicator';
+import { ProUpgradeCard } from '@/components/ProUpgradeCard';
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -134,6 +136,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="pb-20"><div className="container mx-auto px-4 md:px-6"><UsageIndicator /></div></section>
+        <ProUpgradeCard />
+
         {/* Benefits Section */}
         <section className="py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 md:px-6">
@@ -144,7 +149,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-semibold">Fast & Free</h3>
                 <p className="text-primary-foreground/80 leading-relaxed">
-                  No hidden paywalls, no credits, no waiting. Generate as many tags, schemas, and audits as you need instantly.
+                  Basic generators, checkers, schemas, and audits remain free. Advanced computing features will be clearly marked Pro.
                 </p>
               </div>
               <div className="space-y-4">
@@ -153,7 +158,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-semibold">No Signup Required</h3>
                 <p className="text-primary-foreground/80 leading-relaxed">
-                  Your data never leaves your browser. We don't track your keywords or save your URLs. True privacy by default.
+                  Your free-tool data never leaves your browser. We don't track your keywords or save your URLs. True privacy by default.
                 </p>
               </div>
               <div className="space-y-4">
@@ -194,7 +199,7 @@ export default function HomePage() {
               <AccordionItem value="item-1" className="bg-card px-6 border rounded-lg mb-4">
                 <AccordionTrigger className="text-left font-semibold hover:no-underline hover:text-primary">Are these tools really free?</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
-                  Yes, 100% free. There are no premium tiers, no hidden fees, and no required signups. We believe in providing accessible, high-quality tools for everyone.
+                  Yes, the core tools are free with no required signup. Advanced Pro features are planned for users who need deeper analysis, bulk processing, or reports, but simple browser-based tools will remain accessible.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="bg-card px-6 border rounded-lg mb-4">
