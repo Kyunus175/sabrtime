@@ -25,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: seo-toolkit-src
-        run: npm ci --no-audit --no-fund
+        run: npm ci --no-audit --no-fund --omit=optional --no-progress
 
       - name: Build SEO Toolkit
         working-directory: seo-toolkit-src
