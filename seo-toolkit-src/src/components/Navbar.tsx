@@ -1,11 +1,19 @@
 import { Link, useLocation } from 'wouter';
-import { Moon, Sun, Search, Menu, X, ArrowRight } from 'lucide-react';
+import { Moon, Sun, Search, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { tools } from '@/tools';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -21,6 +29,7 @@ export default function Navbar() {
   const filteredTools = searchQuery 
     ? tools.filter(t => t.name.toLowerCase().includes(searchQuery.toLowerCase()) || t.category.toLowerCase().includes(searchQuery.toLowerCase()))
     : [];
+  const toolCategories = Array.from(new Set(tools.map((tool) => tool.category)));
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -35,6 +44,36 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="gap-1.5 px-2 sm:px-3" data-testid="button-all-tools">
+                <span className="hidden sm:inline">All Tools</span>
+                <span className="sm:hidden">Tools</span>
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-72 max-h-[70vh]">
+              <DropdownMenuLabel>Browse all SEO tools</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {toolCategories.map((category) => (
+                <div key={category}>
+                  <DropdownMenuLabel className="px-2 pb-1 pt-2 text-xs font-normal text-muted-foreground">
+                    {category}
+                  </DropdownMenuLabel>
+                  {tools.filter((tool) => tool.category === category).map((tool) => {
+                    const Icon = tool.icon;
+                    return (
+                      <DropdownMenuItem key={tool.slug} onSelect={() => setLocation(`/tool/${tool.slug}`)} className="cursor-pointer">
+                        <Icon className="text-primary" />
+                        <span>{tool.name}</span>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </div>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Popover open={searchOpen} onOpenChange={setSearchOpen}>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden" data-testid="button-search-mobile">

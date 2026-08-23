@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { Link } from 'wouter';
 import { tools } from '@/tools';
 import { ToolCard } from '@/components/ToolCard';
 import { Input } from '@/components/ui/input';
@@ -13,20 +12,15 @@ import { ProUpgradeCard } from '@/components/ProUpgradeCard';
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-
-  const categories = Array.from(new Set(tools.map(t => t.category)));
-
   const filteredTools = useMemo(() => {
     return tools.filter(t => {
       const matchesSearch = t.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                             t.description.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = activeCategory ? t.category === activeCategory : true;
-      return matchesSearch && matchesCategory;
+      return matchesSearch;
     });
-  }, [searchQuery, activeCategory]);
+  }, [searchQuery]);
 
-  const featuredTools = tools.slice(0, 4);
+  const featuredTools = tools.slice(0, 6);
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
@@ -72,69 +66,42 @@ export default function HomePage() {
         </section>
 
         {/* Featured Tools */}
-        {!searchQuery && !activeCategory && (
+        {!searchQuery && (
           <section className="py-16 bg-muted/30 border-y">
             <div className="container mx-auto px-4 md:px-6">
               <h2 className="text-3xl font-bold mb-8 text-center">Featured Tools</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredTools.map(tool => (
                   <ToolCard key={tool.slug} tool={tool} />
                 ))}
               </div>
+              <p className="mt-8 text-center text-sm text-muted-foreground">
+                Showing 6 featured tools. Use <strong className="text-foreground">All Tools</strong> in the menu to browse the complete toolkit.
+              </p>
             </div>
           </section>
         )}
 
-        {/* All Tools Grid */}
-        <section id="tools-grid" className="py-20 scroll-mt-20">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
-              <div>
-                <h2 className="text-3xl font-bold mb-2">All SEO Tools</h2>
-                <p className="text-muted-foreground">Find everything you need to rank higher.</p>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                <Button 
-                  variant={activeCategory === null ? 'default' : 'outline'} 
-                  onClick={() => setActiveCategory(null)}
-                  className="rounded-full"
-                  size="sm"
-                >
-                  All
-                </Button>
-                {categories.map(cat => (
-                  <Button 
-                    key={cat}
-                    variant={activeCategory === cat ? 'default' : 'outline'} 
-                    onClick={() => setActiveCategory(cat)}
-                    className="rounded-full"
-                    size="sm"
-                  >
-                    {cat}
-                  </Button>
-                ))}
-              </div>
+        {searchQuery && (
+          <section id="tools-grid" className="py-20 scroll-mt-20">
+            <div className="container mx-auto px-4 md:px-6">
+              <h2 className="mb-2 text-3xl font-bold">Search Results</h2>
+              <p className="mb-8 text-muted-foreground">Matching tools from the complete toolkit.</p>
+              {filteredTools.length > 0 ? (
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {filteredTools.map(tool => <ToolCard key={tool.slug} tool={tool} />)}
+                </div>
+              ) : (
+                <div className="rounded-2xl border-2 border-dashed py-20 text-center">
+                  <Search className="mx-auto mb-4 h-10 w-10 opacity-50 text-muted-foreground" />
+                  <h3 className="mb-2 text-xl font-semibold">No tools found</h3>
+                  <p className="mb-4 text-muted-foreground">Try a different search term.</p>
+                  <Button variant="outline" onClick={() => setSearchQuery('')}>Clear Search</Button>
+                </div>
+              )}
             </div>
-
-            {filteredTools.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {filteredTools.map(tool => (
-                  <ToolCard key={tool.slug} tool={tool} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-20 border-2 border-dashed rounded-2xl">
-                <Search className="h-10 w-10 text-muted-foreground mx-auto mb-4 opacity-50" />
-                <h3 className="text-xl font-semibold mb-2">No tools found</h3>
-                <p className="text-muted-foreground mb-4">Try a different search term or category.</p>
-                <Button variant="outline" onClick={() => { setSearchQuery(''); setActiveCategory(null); }}>
-                  Clear Filters
-                </Button>
-              </div>
-            )}
-          </div>
-        </section>
+          </section>
+        )}
 
         <section className="pb-20"><div className="container mx-auto px-4 md:px-6"><UsageIndicator /></div></section>
         <ProUpgradeCard />
