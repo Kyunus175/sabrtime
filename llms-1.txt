@@ -1,0 +1,67 @@
+# SabrTime
+
+> SabrTime is a free Islamic companion web app with prayer times, Qibla compass, digital tasbeeh counter, dua library, Islamic calendar, ibadah tracker, and an AI-powered Ilm quiz. No ads, no login required, built for daily Islamic practice.
+
+SabrTime helps Muslims stay consistent with daily worship — salah, dhikr, and dua — through simple, distraction-free tools. All features are free to use and require no account. The project is built and maintained by a single developer, Yunus Khan.
+
+## App
+
+- [Home](https://sabrtime.in/): Prayer times, Qibla compass, digital tasbeeh counter, dua library, Islamic calendar, and ibadah tracker
+- [About](https://sabrtime.in/about.html): About SabrTime, its mission, and who built it
+- [Contact](https://sabrtime.in/contact.html): Contact information
+- [Privacy Policy](https://sabrtime.in/privacy-policy.html): Privacy policy
+- [Terms and Conditions](https://sabrtime.in/terms.html): Terms and conditions
+
+## Blog: Qibla Direction
+
+- [Is Qibla East or West in India? (+15 Other Countries)](https://sabrtime.in/blog/which-direction-is-qibla.html): Qibla direction by country, with the exact angle explained, not just east or west
+- [Qibla Direction Guide](https://sabrtime.in/blog/qibla-direction-guide.html): Finding and understanding your Qibla direction
+- [Exact Qibla Direction in Degrees](https://sabrtime.in/blog/qibla-direction-degrees.html): Precise bearing calculations by city
+- [Does Airplane Mode Affect a Digital Qibla Compass?](https://sabrtime.in/blog/airplane-mode-qibla-compass.html): How offline Qibla compasses work without a data connection
+- [The First Qibla Direction](https://sabrtime.in/blog/first-qibla-direction.html): The history of the change in Qibla from Jerusalem to Makkah
+
+## Blog: Prayer (Salah)
+
+- [Why Do I Feel Nothing During Prayer?](https://sabrtime.in/blog/why-i-feel-nothing-in-prayer.html): What khushu (presence in prayer) actually requires, and why the mind wanders
+- [Missed Prayers (Qaza) Guide](https://sabrtime.in/blog/missed-prayers-qaza-guide.html): Rules for making up missed prayers, with a built-in calculator
+- [Friday Sunnah Checklist](https://sabrtime.in/blog/friday-sunnah-checklist.html): A priority-tiered checklist of Jumu'ah sunnahs
+- [How to Pray Istikhara](https://sabrtime.in/blog/how-to-pray-istikhara.html): The prayer of seeking guidance, step by step
+- [Adhan Meaning](https://sabrtime.in/blog/adhan-meaning.html): Word-by-word translation of the Islamic call to prayer
+- [Sujood as-Sahw Guide](https://sabrtime.in/blog/sujood-as-sahw-guide.html): The prostration of forgetfulness for prayer mistakes
+- [Sajdah Tilawah Guide](https://sabrtime.in/blog/sajdah-tilawah-guide.html): Prostration of Quran recitation
+- [Sajdah Shukr Guide](https://sabrtime.in/blog/sajdah-shukr-guide.html): Prostration of gratitude
+
+## Blog: Duas
+
+- [Can You Make Dua in English?](https://sabrtime.in/blog/dua-in-english.html): Whether dua has to be in Arabic, and how to make dua in your own words
+- [How to Check If a Dua Is Authentic](https://sabrtime.in/blog/how-to-verify-a-dua-is-authentic.html): A step-by-step way to verify a dua's source before reciting or sharing it
+- [Why Does It Feel Like My Dua Isn't Being Answered?](https://sabrtime.in/blog/why-dua-not-answered.html): The three responses hadith and what "unanswered" really means
+- [Meaning of Common Duas](https://sabrtime.in/blog/meaning-of-common-duas.html): What Bismillah, Alhamdulillah, SubhanAllah, and other everyday phrases mean
+- [Duas for Anxiety and Overthinking](https://sabrtime.in/blog/duas-for-anxiety.html): Authentic duas from the Quran and hadith for anxiety
+- [Everyday Duas](https://sabrtime.in/blog/everyday-duas.html): Hadith-sourced duas for daily moments — home, eating, sleep, and travel
+- [Dua for Parents](https://sabrtime.in/blog/dua-for-parents.html): Duas for parents' health, forgiveness, and long life
+
+## Blog: Tasbeeh and Dhikr
+
+- [How to Do Tasbeeh](https://sabrtime.in/blog/tasbeeh-guide.html): The meaning of tasbeeh, correct counts, and common mistakes
+- [Digital Tasbeeh Counter](https://sabrtime.in/blog/digital-tasbeeh-counter.html): How digital tasbeeh counters work and compare to prayer beads
+- [Tasbeeh e Fatima](https://sabrtime.in/blog/tasbeeh-e-fatima.html): Meaning, method, and the story behind the 33-33-34 count
+- [How to Build a Daily Dhikr Habit](https://sabrtime.in/blog/daily-dhikr-habit.html): A system for consistent dhikr that survives a busy day
+- [Durood Tunajjina](https://sabrtime.in/blog/durood-tunajjina.html): Meaning and virtues of this specific salawat
+- [Durood on Friday](https://sabrtime.in/blog/durood-on-friday.html): The virtue of sending salawat on the Prophet on Fridays
+
+## Blog: Quran
+
+- [Surah Al-Fatiha Meaning](https://sabrtime.in/blog/surah-al-fatiha-meaning.html): Full verse-by-verse translation and meaning
+- [Surah Al-Ikhlas Meaning](https://sabrtime.in/blog/surah-al-ikhlas-meaning.html): Full translation and meaning
+- [Surah Al-Kahf on Friday](https://sabrtime.in/blog/surah-al-kahf-friday.html): The hadith on Friday recitation and the surah's four stories
+
+## Blog: Other
+
+- [Why Prophet Ayyub Bathed in Cold Water](https://sabrtime.in/blog/why-ayyub-bathed-in-cold-water.html): The story from Surah Sad 38:41-44
+- [Black Magic in Islam](https://sabrtime.in/blog/black-magic-in-islam.html): What the Quran and hadith actually say about sihr and protection
+
+## Optional
+
+- [Blog Index](https://sabrtime.in/blog/): Full list of all SabrTime blog posts
+- [Sitemap](https://sabrtime.in/sitemap.xml): Complete XML sitemap of all pages
