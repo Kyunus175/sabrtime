@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-Website: SabrTime
-URL: https://sabrtime.in
-Description: SabrTime is a free Islamic companion web app with prayer times, Qibla compass, digital tasbeeh counter, dua library, Islamic calendar, ibadah tracker, and an AI-powered Ilm quiz. No ads, no login required, built for daily Islamic practice.
-
-Blog: https://sabrtime.in/blog
-Topics covered: Qibla direction, dhikr habits, tasbeeh methods and counting, durood and salawat, duas for anxiety and daily life, Islamic calendar.
