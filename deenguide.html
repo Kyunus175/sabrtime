@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DeenGuide — Practical Islamic Guidance for Everyday Situations | SabrTime</title>
+<meta name="description" content="Explore practical Islamic guidance for everyday situations — wudu, prayer, fasting, dua — with Quran and authentic Sunnah references and clear next steps from SabrTime." />
+<link rel="canonical" href="https://sabrtime.in/tools/deenguide.html" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+
+<meta property="og:title" content="DeenGuide — Practical Islamic Guidance for Everyday Situations | SabrTime" />
+<meta property="og:description" content="Not sure what to do? DeenGuide walks you through real-life Islamic situations and gives clear, sourced guidance from the Quran and hadith." />
+<meta property="og:url" content="https://sabrtime.in/tools/deenguide.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SabrTime" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:image" content="https://sabrtime.in/icons/icon-512.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DeenGuide — Practical Islamic Guidance for Everyday Situations" />
+<meta name="twitter:description" content="Real-life Islamic situations. Clear, carefully sourced guidance." />
+<meta name="twitter:image" content="https://sabrtime.in/icons/icon-512.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lateef:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/blog/assets/blog-style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "DeenGuide",
+  "url": "https://sabrtime.in/tools/deenguide.html",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Any",
+  "description": "A situation-first Islamic guidance navigator — pick what you're dealing with and get clear, sourced guidance from the Quran and hadith.",
+  "isPartOf": {"@type": "WebSite", "name": "SabrTime", "url": "https://sabrtime.in/"},
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "SabrTime", "item": "https://sabrtime.in/"},
+    {"@type": "ListItem", "position": 2, "name": "DeenGuide", "item": "https://sabrtime.in/tools/deenguide.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is DeenGuide a fatwa service?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. DeenGuide gives general, sourced educational guidance based on the Quran and authentic Sunnah. It does not replace a qualified scholar, especially for personal or complicated situations."}
+    },
+    {
+      "@type": "Question",
+      "name": "What sources does DeenGuide use?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Guidance is drawn from the Quran and authentic hadith collections such as Sahih al-Bukhari and Sahih Muslim, with references shown under each answer so you can verify them yourself."}
+    },
+    {
+      "@type": "Question",
+      "name": "What if scholars have different opinions on my situation?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Islamic scholarship contains legitimate differences of opinion on many issues. Where this applies, DeenGuide notes that scholars differ and points you toward a qualified local scholar for your specific case rather than picking a side for you."}
+    },
+    {
+      "@type": "Question",
+      "name": "Should I consult a scholar instead of using DeenGuide?",
+      "acceptedAnswer": {"@type": "Answer", "text": "For anything personal, high-stakes, or dependent on details specific to your situation, yes. DeenGuide is meant to give you a clear, sourced starting point, not a final personal ruling."}
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --dg-sand:#f5ede0; --dg-ink:#1a1208; --dg-ink-soft:#3d2f1a;
+    --dg-gold:#c9963a; --dg-gold-pale:#f7e8c8;
+    --dg-teal:#2d6b6b; --dg-teal-pale:#d4eeee;
+  }
+  .dg-wrap{max-width:640px;margin:0 auto;padding:24px 20px 60px;font-family:'Cormorant Garamond',Georgia,serif;color:var(--dg-ink);}
+  .dg-hero{text-align:center;padding:20px 0 30px;}
+  .dg-hero .dg-mark{font-size:32px;margin-bottom:10px;}
+  .dg-hero h1{font-family:'Amiri',serif;font-size:30px;font-weight:700;margin:0 0 10px;}
+  .dg-hero p{font-size:17px;color:var(--dg-ink-soft);max-width:420px;margin:0 auto;}
+
+  .dg-search{display:flex;gap:8px;background:#fff;border:1px solid rgba(201,150,58,.3);border-radius:24px;padding:10px 18px;margin:22px 0;align-items:center;}
+  .dg-search input{border:none;outline:none;flex:1;font-family:'Cormorant Garamond',serif;font-size:16px;background:transparent;color:var(--dg-ink);}
+  .dg-search input::placeholder{color:#9c8b6a;}
+
+  .dg-step{display:none;}
+  .dg-step.active{display:block;animation:dgFade .35s ease;}
+  @keyframes dgFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+  .dg-nav-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+  .dg-back-btn{background:none;border:1px solid rgba(201,150,58,.35);border-radius:20px;padding:7px 16px;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--dg-teal);cursor:pointer;}
+  .dg-back-btn:hover{background:var(--dg-teal-pale);}
+  .dg-crumb{font-size:13px;color:#9c8b6a;font-style:italic;}
+
+  .dg-cat-grid, .dg-sit-grid{display:flex;flex-direction:column;gap:12px;}
+  .dg-cat-card, .dg-sit-card, .dg-opt-card{
+    display:flex;align-items:center;gap:14px;background:rgba(255,252,245,.9);
+    border:1px solid rgba(201,150,58,.28);border-radius:12px;padding:16px 18px;
+    cursor:pointer;text-align:left;font-family:'Cormorant Garamond',serif;
+    transition:border-color .15s, transform .1s;width:100%;
+    color:inherit;text-decoration:none;box-sizing:border-box;
+  }
+  .dg-cat-card:hover, .dg-sit-card:hover, .dg-opt-card:hover{border-color:var(--dg-gold);transform:translateY(-1px);}
+  .dg-cat-icon{font-size:26px;flex-shrink:0;}
+  .dg-cat-title{font-size:18px;font-weight:700;color:var(--dg-ink);}
+  .dg-cat-count{font-size:13px;color:#9c8b6a;margin-top:2px;}
+  .dg-sit-title{font-size:16.5px;color:var(--dg-ink);}
+  .dg-arrow{margin-left:auto;color:var(--dg-gold);font-size:18px;}
+
+  .dg-question h2{font-family:'Amiri',serif;font-size:22px;margin-bottom:18px;line-height:1.35;}
+  .dg-opt-card{justify-content:flex-start;}
+
+  .dg-result{background:rgba(255,252,245,.9);border:1px solid rgba(201,150,58,.28);border-radius:14px;padding:24px 22px;}
+  .dg-result .dg-r-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dg-gold);font-weight:700;margin-bottom:6px;}
+  .dg-result h2{font-family:'Amiri',serif;font-size:22px;margin-bottom:16px;line-height:1.35;}
+  .dg-result h3{font-family:'Amiri',serif;font-size:16px;color:var(--dg-teal);margin:18px 0 8px;}
+  .dg-result p, .dg-result li{font-size:16.5px;line-height:1.6;}
+  .dg-result ul{padding-left:20px;margin:0;}
+  .dg-result li{margin-bottom:6px;}
+  .dg-important{background:var(--dg-gold-pale);border-radius:10px;padding:14px 16px;margin-top:16px;font-size:15px;}
+  .dg-sources{margin-top:18px;padding-top:14px;border-top:1px dashed rgba(201,150,58,.35);font-size:13.5px;color:var(--dg-ink-soft);}
+  .dg-sources a{color:var(--dg-teal);}
+  .dg-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .dg-tool-link{background:var(--dg-teal);color:#fff !important;text-decoration:none;font-size:13.5px;padding:8px 14px;border-radius:16px;}
+  .dg-tool-link:hover{background:#245757;}
+  .dg-share-link{background:#25D366 !important;}
+  .dg-share-link:hover{background:#1ebc59 !important;}
+
+  .dg-not-sure{width:100%;background:none;border:1px dashed rgba(201,150,58,.4);border-radius:12px;padding:14px 16px;margin-top:4px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#9c8b6a;cursor:pointer;text-align:center;}
+  .dg-not-sure:hover{border-color:var(--dg-gold);color:var(--dg-ink-soft);}
+
+  .dg-restart{display:block;width:100%;margin-top:22px;background:var(--dg-teal);color:#fff;border:none;border-radius:12px;padding:14px;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;cursor:pointer;}
+  .dg-restart:hover{background:#245757;}
+
+  .dg-scholar-note{font-size:13.5px;color:#9c8b6a;font-style:italic;text-align:center;margin-top:24px;padding:0 12px;}
+
+  .dg-no-results{text-align:center;color:#9c8b6a;font-style:italic;padding:20px 0;}
+  @media (min-width:600px){.dg-cat-grid{display:grid;grid-template-columns:1fr 1fr;}}
+
+  .dg-intro{font-size:15.5px;line-height:1.6;color:var(--dg-ink-soft);background:rgba(255,252,245,.6);border:1px solid rgba(201,150,58,.2);border-radius:12px;padding:16px 18px;margin:0 0 22px;}
+  .dg-intro h2{font-family:'Amiri',serif;font-size:17px;color:var(--dg-ink);margin:0 0 6px;}
+
+  .dg-related{margin-top:18px;padding-top:14px;border-top:1px dashed rgba(201,150,58,.35);}
+  .dg-related h3{font-family:'Amiri',serif;font-size:16px;color:var(--dg-teal);margin:0 0 8px;}
+  .dg-related-links{display:flex;flex-wrap:wrap;gap:8px;}
+  .dg-related-links a{font-size:13.5px;color:var(--dg-teal);background:var(--dg-teal-pale);text-decoration:none;padding:6px 12px;border-radius:14px;}
+  .dg-related-links a:hover{background:var(--dg-gold-pale);color:var(--dg-ink);}
+
+  .dg-faq, .dg-methodology{max-width:640px;margin:36px auto 0;padding:0 20px;font-family:'Cormorant Garamond',Georgia,serif;color:var(--dg-ink-soft);}
+  .dg-faq h2, .dg-methodology h2{font-family:'Amiri',serif;font-size:22px;color:var(--dg-ink);margin:0 0 14px;}
+  .dg-faq-item{border-bottom:1px solid rgba(201,150,58,.2);padding:12px 0;}
+  .dg-faq-item summary{cursor:pointer;font-size:16.5px;color:var(--dg-ink);font-weight:600;}
+  .dg-faq-item p{font-size:15.5px;line-height:1.55;margin:8px 0 0;}
+  .dg-methodology p, .dg-methodology li{font-size:15.5px;line-height:1.6;}
+  .dg-methodology ul{padding-left:20px;}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://sabrtime.in/" class="brand-mini"><span class="brand-mark">✦</span> SabrTime</a>
+    <nav>
+      <a href="/tools/reflection-cards.html">Reflection Cards</a>
+      <a href="/blog/">Blog</a>
+      <a href="/e-books/">Ebooks</a>
+      <a href="https://sabrtime.in/">App</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dg-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://sabrtime.in/">SabrTime</a>
+    <span class="sep">/</span>
+    <span class="current">DeenGuide</span>
+  </nav>
+
+  <div class="dg-hero">
+    <div class="dg-mark" aria-hidden="true">🧭</div>
+    <h1>What are you dealing with?</h1>
+    <p>Real-life Islamic situations. Clear, carefully sourced guidance — not a fatwa, just the next right step.</p>
+  </div>
+
+  <div class="dg-intro">
+    <h2>What is DeenGuide?</h2>
+    <p>DeenGuide helps you navigate common everyday Islamic situations — a missed prayer, a fasting question, a doubt during wudu — with structured, source-based guidance you can act on. Pick a category or search below to get started.</p>
+  </div>
+
+  <div class="dg-intro" style="display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap;">
+    <span><strong style="font-family:'Amiri',serif;color:var(--dg-ink);">🕊️ New: Reflection Cards</strong><br/>Turn a short reflection into a beautiful card you can share.</span>
+    <a class="dg-tool-link" href="/tools/reflection-cards.html">Create a Card</a>
+  </div>
+
+  <div class="dg-search">
+    <span aria-hidden="true">🔎</span>
+    <input type="text" id="dgSearchInput" aria-label="Search a situation" placeholder="Search a situation, e.g. &quot;no water&quot;" oninput="dgHandleSearch(this.value)" />
+  </div>
+  <div id="dgSearchResults"></div>
+
+  <!-- STEP 1: CATEGORY LIST -->
+  <div class="dg-step active" id="dg-step-categories">
+    <div class="dg-cat-grid" id="dgCategoryGrid"></div>
+  </div>
+
+  <!-- STEP 2: SITUATION LIST WITHIN CATEGORY -->
+  <div class="dg-step" id="dg-step-situations">
+    <div class="dg-nav-row">
+      <button class="dg-back-btn" onclick="dgGoToCategories()">← Categories</button>
+      <span class="dg-crumb" id="dgCatCrumb"></span>
+    </div>
+    <div class="dg-sit-grid" id="dgSituationGrid"></div>
+  </div>
+
+  <!-- STEP 3: QUESTION -->
+  <div class="dg-step" id="dg-step-question">
+    <div class="dg-nav-row">
+      <button class="dg-back-btn" onclick="dgGoBackToSituations()">← Back</button>
+      <span class="dg-crumb" id="dgQCrumb"></span>
+    </div>
+    <div class="dg-question">
+      <h2 id="dgQuestionText"></h2>
+      <div class="dg-sit-grid" id="dgOptionsGrid"></div>
+      <button class="dg-not-sure" id="dgNotSureBtn" onclick="dgNotSure()">I'm not sure</button>
+    </div>
+  </div>
+
+  <!-- STEP 4: RESULT -->
+  <div class="dg-step" id="dg-step-result">
+    <div class="dg-nav-row">
+      <button class="dg-back-btn" onclick="dgGoToCategories()">← Categories</button>
+      <span class="dg-crumb" id="dgRCrumb"></span>
+    </div>
+    <div class="dg-result" id="dgResultBody"></div>
+    <button class="dg-restart" onclick="dgGoToCategories()">Ask About Something Else</button>
+    <p class="dg-scholar-note">DeenGuide gives general, sourced guidance — it isn't a fatwa. For your specific personal situation, consult a qualified local scholar.</p>
+  </div>
+
+</div>
+
+<section class="dg-methodology" aria-labelledby="dg-directory-h">
+  <h2 id="dg-directory-h">Browse All Situations</h2>
+  <p>Every situation below has its own page with full sourced guidance — no need to use the tool above to reach it.</p>
+
+  <h3 style="font-family:'Amiri',serif;font-size:16px;color:var(--dg-teal);margin:18px 0 8px;">💧 Wudu & Purification</h3>
+  <div class="dg-related-links" style="margin-bottom:6px;">
+    <a href="/tools/deenguide/no-water.html">I don't have water (or it would harm me)</a>
+    <a href="/tools/deenguide/when-ghusl.html">I need to understand when ghusl is required</a>
+    <a href="/tools/deenguide/wudu-broke.html">I am unsure whether my wudu broke</a>
+  </div>
+
+  <h3 style="font-family:'Amiri',serif;font-size:16px;color:var(--dg-teal);margin:18px 0 8px;">🕌 Salah</h3>
+  <div class="dg-related-links" style="margin-bottom:6px;">
+    <a href="/tools/deenguide/stand-prayer.html">I cannot stand for prayer</a>
+    <a href="/tools/deenguide/missed-prayer.html">I missed a prayer (overslept or forgot)</a>
+  </div>
+
+  <h3 style="font-family:'Amiri',serif;font-size:16px;color:var(--dg-teal);margin:18px 0 8px;">🌙 Fasting</h3>
+  <div class="dg-related-links" style="margin-bottom:6px;">
+    <a href="/tools/deenguide/ate-fasting.html">I accidentally ate or drank while fasting</a>
+    <a href="/tools/deenguide/missed-suhoor.html">I overslept and missed suhoor</a>
+    <a href="/tools/deenguide/sick-ramadan.html">I am sick during Ramadan</a>
+  </div>
+
+  <h3 style="font-family:'Amiri',serif;font-size:16px;color:var(--dg-teal);margin:18px 0 8px;">🤲 Dua & Dhikr</h3>
+  <div class="dg-related-links">
+    <a href="/tools/deenguide/dont-know-dua.html">I don't know what dua to make</a>
+    <a href="/tools/deenguide/dua-not-answered.html">My dua hasn't been answered</a>
+    <a href="/tools/deenguide/after-salah-dhikr.html">What should I say after Salah?</a>
+  </div>
+</section>
+
+<section class="dg-methodology" aria-labelledby="dg-method-h">
+  <h2 id="dg-method-h">Sources &amp; Methodology</h2>
+  <p>Every answer in DeenGuide is built from the Quran and authentic hadith collections — mainly Sahih al-Bukhari and Sahih Muslim — with the exact reference shown so you can look it up yourself. No source, hadith number, or scholarly opinion is invented.</p>
+  <ul>
+    <li>Islamic scholarship contains legitimate differences of opinion. Where a genuine difference exists, DeenGuide says so rather than presenting one view as the only one.</li>
+    <li>DeenGuide does not follow one single madhhab (school of jurisprudence) — where views differ by madhhab, that's noted directly.</li>
+    <li>For personal, high-stakes, or complicated situations, DeenGuide points you toward a qualified local scholar rather than issuing a final ruling.</li>
+  </ul>
+
+  <div class="author-card">
+    <div class="author-avatar"><img src="/blog/image-1783764785503.jpg" alt="Yunus Khan" loading="lazy" width="56" height="56" /></div>
+    <div>
+      <div class="author-name">Written by Yunus Khan</div>
+      <div class="author-role">Founder of SabrTime — Building free Islamic digital tools that help Muslims strengthen their worship through technology.</div>
+      <div class="author-links"><a href="https://sabrtime.in/">sabrtime.in</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="dg-faq" aria-labelledby="dg-faq-h">
+  <h2 id="dg-faq-h">Frequently Asked Questions</h2>
+  <details class="dg-faq-item">
+    <summary>Is DeenGuide a fatwa service?</summary>
+    <p>No. It gives general, sourced educational guidance — not a personal religious ruling. For your specific situation, consult a qualified local scholar.</p>
+  </details>
+  <details class="dg-faq-item">
+    <summary>What sources does DeenGuide use?</summary>
+    <p>The Quran and authentic hadith collections such as Sahih al-Bukhari and Sahih Muslim, with the reference shown under each answer.</p>
+  </details>
+  <details class="dg-faq-item">
+    <summary>What if scholars have different opinions on my situation?</summary>
+    <p>DeenGuide notes when a genuine difference of opinion exists among scholars, rather than presenting a single view as universally agreed upon.</p>
+  </details>
+  <details class="dg-faq-item">
+    <summary>Should I consult a scholar instead of using DeenGuide?</summary>
+    <p>For anything personal, high-stakes, or dependent on your specific circumstances — yes. DeenGuide is a starting point, not a final personal ruling.</p>
+  </details>
+</section>
+
+<footer class="site-footer">
+  SabrTime — Free Islamic companion app · <a href="https://sabrtime.in/">sabrtime.in</a> · <a href="/blog/">Blog</a> · <a href="/e-books/">Ebooks</a>
+</footer>
+
+<script>
+// ============================================================
+// DeenGuide — situation database
+// Every claim below is sourced. No fabricated references.
+// ============================================================
+
+const DG_CATEGORIES = [
+  { id: "wudu", icon: "💧", title: "Wudu & Purification" },
+  { id: "salah", icon: "🕌", title: "Salah" },
+  { id: "fasting", icon: "🌙", title: "Fasting" },
+  { id: "dua", icon: "🤲", title: "Dua & Dhikr" }
+];
+
+// Search synonyms: query term -> extra terms it should also match against tags/title
+const DG_SYNONYMS = {
+  "qaza": ["missed prayer", "make up prayer"],
+  "ablution": ["wudu"],
+  "salat": ["salah", "prayer"],
+  "salaat": ["salah", "prayer"],
+  "dry ablution": ["tayammum"],
+  "fajr": ["missed prayer"],
+  "overslept": ["missed suhoor", "missed prayer"],
+  "sehri": ["suhoor"],
+  "sehr": ["suhoor"],
+  "roza": ["fasting"],
+  "namaz": ["salah", "prayer"]
+};
+
+const DG_SITUATIONS = [
+  {
+    id: "no-water",
+    category: "wudu",
+    title: "I don't have water (or it would harm me)",
+    tags: ["tayammum", "dry ablution", "no water", "wudu"],
+    result: {
+      situation: "You need to purify yourself for prayer, but water is genuinely unavailable, or using it would cause you harm (illness, extreme cold, injury).",
+      whatToKnow: "Allah has built a specific alternative into the religion for exactly this situation, called tayammum (dry ablution) — it isn't a lesser or informal option, it's a valid, complete substitute for wudu when water genuinely can't be used.",
+      whatYouCanDo: [
+        "Make your intention (niyyah) to purify yourself for prayer.",
+        "Strike both palms once on clean earth, sand, stone, or a dust-covered surface.",
+        "Blow off any excess dust.",
+        "Wipe your palms over your entire face, once.",
+        "Wipe your right palm over your left hand and arm, and your left palm over your right hand and arm.",
+        "You're now purified and can pray, exactly as if you'd made wudu."
+      ],
+      importantNote: "Tayammum is specifically for when water is absent, hard to reach, or would harm you — not simply for convenience when water is available but inconvenient to get to. If you find water before praying, tayammum is no longer valid and you should use water instead. Some scholars differ on whether one strike suffices for both face and arms, or whether two separate strikes are preferred — the method above (one strike) is well-attested and widely followed.",
+      sources: [
+        { title: "Surah Al-Ma'idah 5:6", url: "https://quran.com/al-maidah/6" },
+        { title: "Sahih al-Bukhari 347 (Ammar ibn Yasir's narration of the method)", url: "https://sunnah.com/bukhari:347" }
+      ],
+      relatedTools: [
+        { label: "Prayer Times", url: "https://sabrtime.in/" },
+        { label: "Missed Prayers Guide", url: "/blog/missed-prayers-qaza-guide.html" }
+      ],
+      relatedSituations: ["when-ghusl", "wudu-broke"],
+      relatedArticles: []
+    }
+  },
+  {
+    id: "when-ghusl",
+    category: "wudu",
+    title: "I need to understand when ghusl is required",
+    tags: ["ghusl", "janabah", "bath", "purification"],
+    result: {
+      situation: "You're not sure whether your current state requires a full ghusl (bath) rather than just wudu.",
+      whatToKnow: "Ghusl becomes obligatory (fard) in a specific, limited set of situations — it isn't required for everyday impurity, only for what's called a state of janabah (major ritual impurity) or after menstruation/postpartum bleeding ends.",
+      whatYouCanDo: [
+        "Ghusl is required after sexual intercourse, even without ejaculation, according to the majority scholarly position (Sahih Muslim 348).",
+        "Ghusl is required after ejaculation with desire, whether while awake or during a wet dream.",
+        "Ghusl is required for women once menstrual or postpartum bleeding has completely stopped.",
+        "To perform ghusl: make the intention, then wash your entire body with water, making sure it reaches your skin and the roots of your hair.",
+        "There's no requirement to undo braided hair for ghusl after janabah — pouring water over the head three times is sufficient (based on the hadith of Umm Salamah, Sahih Muslim 330)."
+      ],
+      importantNote: "Ghusl can be delayed until shortly before the next prayer if needed — it doesn't have to happen the instant the state occurs, though sleeping in a state of janabah without at least making wudu first is discouraged.",
+      sources: [
+        { title: "Surah Al-Ma'idah 5:6", url: "https://quran.com/al-maidah/6" },
+        { title: "Sahih Muslim 348–349 (ghusl obligatory upon intercourse)", url: "https://sunnah.com/muslim:348" },
+        { title: "Sahih Muslim 330 (Umm Salamah, on hair during ghusl)", url: "https://sunnah.com/muslim:330" }
+      ],
+      relatedTools: [
+        { label: "Prayer Times", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["no-water", "wudu-broke"],
+      relatedArticles: []
+    }
+  },
+  {
+    id: "wudu-broke",
+    category: "wudu",
+    title: "I am unsure whether my wudu broke",
+    tags: ["wudu broken", "waswasah", "doubt", "purification"],
+    question: "Did something happen that you're actually certain about — like hearing a clear sound or feeling something definite — or is it more of a vague feeling or doubt?",
+    options: [
+      { label: "I'm certain something happened", nextResult: "wudu-broke-certain" },
+      { label: "It's just a vague feeling or doubt", nextResult: "wudu-broke-doubt" }
+    ]
+  },
+  {
+    id: "stand-prayer",
+    category: "salah",
+    title: "I cannot stand for prayer",
+    tags: ["sitting prayer", "illness", "disability", "salah"],
+    question: "Can you sit upright, even if you can't stand?",
+    options: [
+      { label: "Yes, I can sit upright", nextResult: "pray-sitting" },
+      { label: "No, I can't sit either", nextResult: "pray-lying" }
+    ]
+  },
+  {
+    id: "ate-fasting",
+    category: "fasting",
+    title: "I accidentally ate or drank while fasting",
+    tags: ["fasting mistake", "forgot fasting", "ramadan"],
+    result: {
+      situation: "You forgot you were fasting and ate or drank something, then remembered partway through — or right after.",
+      whatToKnow: "This is one of the clearest, most reassuring rulings in fiqh: eating or drinking out of genuine forgetfulness does not break your fast. It's treated as something Allah provided you in that moment, not a violation.",
+      whatYouCanDo: [
+        "Stop eating or drinking the moment you remember.",
+        "Continue your fast exactly as normal — there's nothing further to do.",
+        "According to the majority of scholars (Shafi'i, Hanafi, and others), no make-up day and no expiation are required.",
+        "If you see someone else eating or drinking while fasting, it's encouraged to gently remind them — this is considered part of enjoining good."
+      ],
+      importantNote: "The Maliki school takes a different, minority position: they hold that the fast should still be made up later (though without expiation), even if it was a genuine mistake. If you follow the Maliki madhhab, it's worth confirming this with a teacher from that school specifically.",
+      sources: [
+        { title: "Sahih al-Bukhari 1933 / Sahih Muslim 1155 (Abu Hurairah)", url: "https://sunnah.com/bukhari:1933" },
+        { title: "Surah Al-Baqarah 2:286 (Allah does not burden a soul for what it forgets or errs in)", url: "https://quran.com/al-baqarah/286" }
+      ],
+      relatedTools: [
+        { label: "Dua Library", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["missed-suhoor", "sick-ramadan"],
+      relatedArticles: []
+    }
+  },
+  {
+    id: "missed-prayer",
+    category: "salah",
+    title: "I missed a prayer (overslept or forgot)",
+    tags: ["missed prayer", "qaza", "fajr", "overslept", "forgot prayer"],
+    result: {
+      situation: "You missed a prayer — through oversleeping, forgetfulness, or being caught up in something — and you're not sure what to do now.",
+      whatToKnow: "The Prophet ﷺ gave a direct, simple answer for exactly this: the expiation for missing a prayer is simply to pray it when you remember. There's no extra fasting, charity, or penalty attached.",
+      whatYouCanDo: [
+        "Pray the missed prayer as soon as you remember it — this is what fulfils the obligation.",
+        "If it's close to your next prayer's time, pray the missed one first, then the current one, unless doing so would cause you to miss the current prayer's time entirely.",
+        "If you missed it due to genuine sleep or forgetfulness, there's no sin in the delay itself — the only requirement is to make it up.",
+        "If it was skipped on purpose, sincere repentance (tawbah) matters alongside making it up, since the obligation to pray it remains either way."
+      ],
+      importantNote: "Scholars differ on some of the finer details — for example how to handle a long-standing backlog of missed prayers built up over years. If that's your situation, it's worth discussing a practical approach with a knowledgeable person rather than guessing.",
+      sources: [
+        { title: "Sahih Muslim 684 (Anas ibn Malik)", url: "https://sunnah.com/muslim:684" }
+      ],
+      relatedTools: [
+        { label: "Prayer Times", url: "https://sabrtime.in/" },
+        { label: "Missed Prayers (Qaza) Guide", url: "/blog/missed-prayers-qaza-guide.html" }
+      ],
+      relatedSituations: ["stand-prayer", "wudu-broke"],
+      relatedArticles: [ { label: "Missed Prayers & Qaza Guide", url: "/blog/missed-prayers-qaza-guide.html" } ]
+    }
+  },
+  {
+    id: "missed-suhoor",
+    category: "fasting",
+    title: "I overslept and missed suhoor",
+    tags: ["missed suhoor", "sehri", "overslept", "ramadan", "fasting"],
+    result: {
+      situation: "You woke up after suhoor time ended, or forgot to eat it, and you're wondering if your fast still counts.",
+      whatToKnow: "Suhoor (the pre-dawn meal) is a recommended sunnah, not a condition for your fast to be valid. The Prophet ﷺ encouraged it for the blessing in it — missing it doesn't take anything away from the fast itself.",
+      whatYouCanDo: [
+        "Simply continue your fast for the day as normal — nothing further is required.",
+        "Your intention (niyyah) to fast doesn't need to be spoken aloud; a general intention to fast the month, or intending before dawn, is enough even without a meal.",
+        "If oversleeping is a recurring issue, an earlier alarm or drinking water before bed can help for future days."
+      ],
+      importantNote: null,
+      sources: [
+        { title: "Sahih al-Bukhari 1923 (Anas ibn Malik, 'Take suhoor, for there is blessing in it')", url: "https://sunnah.com/bukhari:1923" }
+      ],
+      relatedTools: [
+        { label: "Prayer Times", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["ate-fasting", "sick-ramadan"],
+      relatedArticles: []
+    }
+  },
+  {
+    id: "sick-ramadan",
+    category: "fasting",
+    title: "I am sick during Ramadan",
+    tags: ["sick", "illness", "ramadan", "fasting", "medication"],
+    result: {
+      situation: "You're unwell during Ramadan and unsure whether you're allowed to skip fasting that day.",
+      whatToKnow: "The Quran names illness directly as one of the explicit exemptions from fasting — this isn't something to feel guilty about using when it genuinely applies.",
+      whatYouCanDo: [
+        "If fasting would genuinely worsen your illness, delay your recovery, or you've been medically advised against it, you may break your fast or skip it that day.",
+        "Make up the missed days later in the year, once you've recovered, before the next Ramadan begins.",
+        "If the illness is long-term or permanent and fasting is unlikely to ever become possible again, the ruling generally shifts toward feeding a needy person (fidyah) instead of making up the fast — this is worth confirming for your specific case."
+      ],
+      importantNote: "The line between 'genuinely harmful' and 'just uncomfortable' isn't always obvious — ordinary tiredness or hunger usually doesn't qualify, but real medical risk does. A doctor's advice alongside a knowledgeable person's guidance is the safest combination here.",
+      sources: [
+        { title: "Surah Al-Baqarah 2:184-185", url: "https://quran.com/al-baqarah/184-185" }
+      ],
+      relatedTools: [
+        { label: "Prayer Times", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["missed-suhoor", "ate-fasting"],
+      relatedArticles: []
+    }
+  },
+  {
+    id: "dont-know-dua",
+    category: "dua",
+    title: "I don't know what dua to make",
+    tags: ["dua", "how to make dua", "own words", "supplication"],
+    result: {
+      situation: "You want to make dua but aren't sure what to say, or feel like you need special or formal words.",
+      whatToKnow: "Dua doesn't require Arabic, formal wording, or a fixed formula — the Quran describes Allah as near, responding to whoever calls upon Him, in whatever words are genuine.",
+      whatYouCanDo: [
+        "Speak to Allah in your own language, in your own words, about exactly what's on your mind.",
+        "If you'd like a simple structure, start with praise of Allah and salutations on the Prophet ﷺ, then ask directly, then close the same way.",
+        "Learning short Quranic or Prophetic duas over time adds beauty and precedent, but isn't a requirement to make dua right now."
+      ],
+      importantNote: null,
+      sources: [
+        { title: "Surah Al-Baqarah 2:186", url: "https://quran.com/al-baqarah/186" }
+      ],
+      relatedTools: [
+        { label: "Dua Library", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["dua-not-answered", "after-salah-dhikr"],
+      relatedArticles: [
+        { label: "Everyday Duas", url: "/blog/everyday-duas.html" },
+        { label: "Dua in English", url: "/blog/dua-in-english.html" }
+      ]
+    }
+  },
+  {
+    id: "dua-not-answered",
+    category: "dua",
+    title: "My dua hasn't been answered",
+    tags: ["dua not answered", "supplication", "unanswered dua", "sabr"],
+    result: {
+      situation: "You've been making dua for something for a while and it feels like nothing has changed.",
+      whatToKnow: "The Prophet ﷺ named the specific thing that gets in the way here: the dua is described as being answered as long as a person doesn't grow impatient and give up, assuming it has failed.",
+      whatYouCanDo: [
+        "Keep making the dua rather than treating silence as a no — scholars commonly describe three ways a sincere dua is answered: the exact request, a related good outcome, or protection from a harm you'll never see.",
+        "Check the practical basics: sincerity, and keeping your food, income, and daily dealings within halal boundaries, are commonly mentioned as things that affect how a dua is received.",
+        "Where the matter involves something within your control, pair the dua with real effort — dua and action are meant to work together, not replace each other."
+      ],
+      importantNote: null,
+      sources: [
+        { title: "Sahih al-Bukhari 6340 / Sahih Muslim 2735 (Abu Hurairah)", url: "https://sunnah.com/bukhari:6340" }
+      ],
+      relatedTools: [
+        { label: "Dua Library", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["dont-know-dua"],
+      relatedArticles: [
+        { label: "Why Isn't My Dua Being Answered?", url: "/blog/why-dua-not-answered.html" },
+        { label: "Duas for Anxiety", url: "/blog/duas-for-anxiety.html" }
+      ]
+    }
+  },
+  {
+    id: "after-salah-dhikr",
+    category: "dua",
+    title: "What should I say after Salah?",
+    tags: ["dhikr after salah", "tasbeeh", "after prayer", "adhkar"],
+    result: {
+      situation: "You've finished your prayer and want to know if there's something specific recommended to say afterward.",
+      whatToKnow: "There's a well-known, specific set of remembrance (dhikr) recommended right after each obligatory prayer — it isn't obligatory, but it's a consistently practiced sunnah with real reward attached.",
+      whatYouCanDo: [
+        "Say SubhanAllah 33 times, Alhamdulillah 33 times, and Allahu Akbar 33 times, then complete the 100th by saying 'La ilaha illallah, wahdahu la sharika lah...'",
+        "Ayat al-Kursi and the last three surahs (Al-Ikhlas, Al-Falaq, An-Nas) are also commonly recited after each obligatory prayer.",
+        "This is recommended, not obligatory — if you're short on time, even a shortened version still carries real reward."
+      ],
+      importantNote: null,
+      sources: [
+        { title: "Sahih Muslim 597 (Abu Hurairah)", url: "https://sunnah.com/muslim:597" }
+      ],
+      relatedTools: [
+        { label: "Digital Tasbeeh Counter", url: "https://sabrtime.in/" }
+      ],
+      relatedSituations: ["dont-know-dua"],
+      relatedArticles: [
+        { label: "Daily Dhikr Habit", url: "/blog/daily-dhikr-habit.html" },
+        { label: "Tasbeeh Guide", url: "/blog/tasbeeh-guide.html" }
+      ]
+    }
+  }
+];
+
+const DG_RESULTS = {
+  "wudu-broke-certain": {
+    situation: "You're certain something specific happened — you heard or felt a clear, definite sign.",
+    whatToKnow: "When there's genuine certainty, your wudu is broken and needs to be renewed before you pray. The confirmed nullifiers include passing wind, urination, defecation, deep sleep, and loss of consciousness.",
+    whatYouCanDo: [
+      "Perform wudu again from the start before praying.",
+      "If this happened in the middle of salah, stop, renew your wudu, and restart the prayer from the beginning."
+    ],
+    importantNote: "A few other matters — like touching your spouse, or blood flowing from a wound — are genuine points of difference between the madhhabs. If one of those applies to you and you're unsure, it's worth checking your specific school of thought.",
+    sources: [
+      { title: "Sahih al-Bukhari 175", url: "https://sunnah.com/bukhari:175" },
+      { title: "Sahih Muslim 361", url: "https://sunnah.com/muslim:361" }
+    ],
+    relatedTools: [ { label: "Prayer Times", url: "https://sabrtime.in/" } ]
+  },
+  "wudu-broke-doubt": {
+    situation: "You have a vague feeling or doubt, but nothing you're actually certain happened.",
+    whatToKnow: "There's a specific, well-established principle here: certainty is not overturned by doubt. Your wudu stays valid until you're genuinely sure it's broken — a feeling, a suspicion, or background anxiety isn't enough on its own.",
+    whatYouCanDo: [
+      "Continue exactly as you were — praying, or going about your day — without renewing your wudu.",
+      "The Prophet ﷺ specifically addressed this: don't leave the prayer or assume your wudu broke unless you hear a sound or notice a smell that confirms it.",
+      "If the doubt keeps returning, it's often waswasah (repetitive intrusive doubt) rather than a real signal — the guidance is to firmly ignore it, not to keep checking."
+    ],
+    importantNote: null,
+    sources: [
+      { title: "Sahih al-Bukhari 175", url: "https://sunnah.com/bukhari:175" },
+      { title: "Sahih Muslim 361", url: "https://sunnah.com/muslim:361" },
+      { title: "Sunan Ibn Majah 513", url: "https://sunnah.com/ibnmajah:513" }
+    ],
+    relatedTools: [ { label: "Prayer Times", url: "https://sabrtime.in/" } ]
+  },
+  "pray-sitting": {
+    situation: "You're able to sit upright, but can't stand for prayer.",
+    whatToKnow: "This is directly and clearly addressed in hadith — praying sitting when you have a genuine reason isn't a lesser or incomplete prayer. It's the correct way for you to pray right now.",
+    whatYouCanDo: [
+      "Pray sitting, performing your normal recitation.",
+      "For ruku (bowing) and sujood (prostration), lean/tilt forward from your seated position — sujood should be tilted lower than ruku.",
+      "The rest of the prayer (tashahhud, tasleem) continues seated as normal."
+    ],
+    importantNote: "This concession is specifically for obligatory prayers when standing is genuinely difficult or harmful — not for general tiredness. If you're able to stand but simply find it hard, it's worth trying to stand for at least the parts you can manage.",
+    sources: [
+      { title: "Sahih al-Bukhari 1117 ('Imran ibn Husayn)", url: "https://sunnah.com/bukhari:1117" }
+    ],
+    relatedTools: [ { label: "Prayer Times", url: "https://sabrtime.in/" } ]
+  },
+  "pray-lying": {
+    situation: "You're unable to stand or sit for prayer.",
+    whatToKnow: "The same hadith that permits sitting also explicitly extends to lying down when even sitting isn't possible — this is a complete, valid way to pray, not a partial one.",
+    whatYouCanDo: [
+      "Pray lying on your side, facing the Qibla direction if possible.",
+      "Use small head-tilts or eye movements (whatever you're capable of) to indicate the transitions between standing, bowing, and prostration.",
+      "If facing the Qibla itself isn't possible due to your condition, pray in whatever direction you're able to — the obligation is waived for what's genuinely beyond your ability."
+    ],
+    importantNote: null,
+    sources: [
+      { title: "Sahih al-Bukhari 1117 ('Imran ibn Husayn)", url: "https://sunnah.com/bukhari:1117" }
+    ],
+    relatedTools: [
+      { label: "Qibla Compass", url: "https://sabrtime.in/" },
+      { label: "Prayer Times", url: "https://sabrtime.in/" }
+    ]
+  }
+};
+
+// ============================================================
+// Engine
+// ============================================================
+
+let dgState = { category: null, situation: null };
+
+function dgCategoryOf(id){ return DG_CATEGORIES.find(c => c.id === id); }
+function dgSituationOf(id){ return DG_SITUATIONS.find(s => s.id === id); }
+
+function dgShowStep(stepId){
+  document.querySelectorAll('.dg-step').forEach(el => el.classList.remove('active'));
+  document.getElementById(stepId).classList.add('active');
+  window.scrollTo({top: 0, behavior:'smooth'});
+}
+
+function dgRenderCategories(){
+  const grid = document.getElementById('dgCategoryGrid');
+  grid.innerHTML = DG_CATEGORIES.map(cat => {
+    const count = DG_SITUATIONS.filter(s => s.category === cat.id).length;
+    return `<button class="dg-cat-card" onclick="dgSelectCategory('${cat.id}')">
+      <span class="dg-cat-icon">${cat.icon}</span>
+      <span>
+        <div class="dg-cat-title">${cat.title}</div>
+        <div class="dg-cat-count">${count} situation${count!==1?'s':''}</div>
+      </span>
+    </button>`;
+  }).join('');
+}
+
+function dgGoToCategories(){
+  dgState = { category: null, situation: null };
+  document.getElementById('dgSearchInput').value = '';
+  document.getElementById('dgSearchResults').innerHTML = '';
+  dgRenderCategories();
+  dgShowStep('dg-step-categories');
+}
+
+function dgSelectCategory(catId){
+  dgState.category = catId;
+  const cat = dgCategoryOf(catId);
+  document.getElementById('dgCatCrumb').textContent = cat.title;
+  const grid = document.getElementById('dgSituationGrid');
+  grid.innerHTML = DG_SITUATIONS.filter(s => s.category === catId).map(s =>
+    `<a class="dg-sit-card" href="/tools/deenguide/${s.id}.html" onclick="dgSelectSituation('${s.id}'); return false;">
+      <span class="dg-sit-title">${s.title}</span>
+      <span class="dg-arrow">›</span>
+    </a>`
+  ).join('');
+  dgShowStep('dg-step-situations');
+}
+
+function dgGoBackToSituations(){
+  if(dgState.category){ dgSelectCategory(dgState.category); }
+  else { dgGoToCategories(); }
+}
+
+function dgSelectSituation(sitId){
+  const sit = dgSituationOf(sitId);
+  dgState.situation = sitId;
+  if(sit.question){
+    document.getElementById('dgQCrumb').textContent = sit.title;
+    document.getElementById('dgQuestionText').textContent = sit.question;
+    const optGrid = document.getElementById('dgOptionsGrid');
+    optGrid.innerHTML = sit.options.map(opt =>
+      `<button class="dg-opt-card" onclick="dgShowResult('${opt.nextResult}')">
+        <span class="dg-sit-title">${opt.label}</span>
+      </button>`
+    ).join('');
+    document.getElementById('dgNotSureBtn').onclick = () => dgShowGeneralFallback(sit);
+    dgShowStep('dg-step-question');
+  } else {
+    dgRenderResult(sit.result, sit.title);
+    dgShowStep('dg-step-result');
+  }
+}
+
+function dgShowResult(resultKey){
+  const result = DG_RESULTS[resultKey];
+  const sit = dgSituationOf(dgState.situation);
+  dgRenderResult(result, sit.title);
+  dgShowStep('dg-step-result');
+}
+
+function dgShowGeneralFallback(sit){
+  document.getElementById('dgRCrumb').textContent = sit.title;
+  document.getElementById('dgResultBody').innerHTML = `
+    <div class="dg-r-eyebrow">Not Enough Information</div>
+    <h2>We need a bit more clarity to guide you accurately here.</h2>
+    <p>This particular situation genuinely depends on the detail we asked about — without it, general guidance could be misleading rather than helpful.</p>
+    <p>The safest next step is to take a moment to check which answer actually applies to you, or to ask a knowledgeable person nearby who knows your specific circumstances. If it's a personal or complicated case, a qualified local scholar will be able to guide you properly.</p>
+    <div class="dg-tools">
+      <a class="dg-tool-link" href="https://sabrtime.in/">Open SabrTime</a>
+    </div>
+  `;
+  dgShowStep('dg-step-result');
+}
+
+function dgRenderResult(result, title){
+  document.getElementById('dgRCrumb').textContent = title;
+  const importantHtml = result.importantNote
+    ? `<div class="dg-important"><b>Worth knowing:</b> ${result.importantNote}</div>` : '';
+  const sourcesHtml = result.sources.map(s =>
+    `<a href="${s.url}" target="_blank" rel="noopener">${s.title}</a>`
+  ).join(' · ');
+  const toolsHtml = result.relatedTools.map(t =>
+    `<a class="dg-tool-link" href="${t.url}">${t.label}</a>`
+  ).join('');
+
+  const shareText = encodeURIComponent(`${title} — DeenGuide guidance from SabrTime:\n${result.whatToKnow}\n\nSee the full guidance: https://sabrtime.in/tools/deenguide.html`);
+  const shareHtml = `<a class="dg-tool-link dg-share-link" href="https://wa.me/?text=${shareText}" target="_blank" rel="noopener">Share on WhatsApp</a>`;
+
+  const relatedSitIds = result.relatedSituations || [];
+  const relatedSitHtml = relatedSitIds.length ? `
+    <div class="dg-related">
+      <h3>Related situations</h3>
+      <div class="dg-related-links">
+        ${relatedSitIds.map(id => {
+          const s = dgSituationOf(id);
+          return s ? `<a href="/tools/deenguide/${id}.html" onclick="dgJumpToSituation('${id}');return false;">${s.title}</a>` : '';
+        }).join('')}
+      </div>
+    </div>` : '';
+
+  const relatedArticles = result.relatedArticles || [];
+  const relatedArticlesHtml = relatedArticles.length ? `
+    <div class="dg-related">
+      <h3>Related SabrTime articles</h3>
+      <div class="dg-related-links">
+        ${relatedArticles.map(a => `<a href="${a.url}">${a.label}</a>`).join('')}
+      </div>
+    </div>` : '';
+
+  document.getElementById('dgResultBody').innerHTML = `
+    <div class="dg-r-eyebrow">Your Situation</div>
+    <h2>${result.situation}</h2>
+    <h3>What to know</h3>
+    <p>${result.whatToKnow}</p>
+    <h3>What you can do</h3>
+    <ul>${result.whatYouCanDo.map(step => `<li>${step}</li>`).join('')}</ul>
+    ${importantHtml}
+    <div class="dg-sources">Sources: ${sourcesHtml}</div>
+    <div class="dg-tools">${toolsHtml}${shareHtml}</div>
+    ${relatedSitHtml}
+    ${relatedArticlesHtml}
+  `;
+}
+
+function dgExpandQuery(q){
+  const terms = [q];
+  Object.keys(DG_SYNONYMS).forEach(key => {
+    if(q.includes(key)) terms.push(...DG_SYNONYMS[key]);
+  });
+  return terms;
+}
+
+function dgHandleSearch(query){
+  const box = document.getElementById('dgSearchResults');
+  const q = query.trim().toLowerCase();
+  if(q.length < 2){ box.innerHTML = ''; return; }
+  const terms = dgExpandQuery(q);
+  const matches = DG_SITUATIONS.filter(s => {
+    const haystack = (s.title + ' ' + (s.tags || []).join(' ')).toLowerCase();
+    return terms.some(t => haystack.includes(t));
+  });
+  if(matches.length === 0){
+    box.innerHTML = `<div class="dg-no-results">No matching situation yet — try browsing a category below.</div>`;
+    return;
+  }
+  box.innerHTML = `<div class="dg-sit-grid">` + matches.map(s =>
+    `<a class="dg-sit-card" href="/tools/deenguide/${s.id}.html" onclick="dgJumpToSituation('${s.id}'); return false;">
+      <span class="dg-sit-title">${s.title}</span>
+      <span class="dg-arrow">›</span>
+    </a>`
+  ).join('') + `</div>`;
+}
+
+function dgJumpToSituation(sitId){
+  const sit = dgSituationOf(sitId);
+  dgState.category = sit.category;
+  dgSelectSituation(sitId);
+}
+
+function dgNotSure(){
+  // handled dynamically per-situation via dgShowGeneralFallback binding in dgSelectSituation
+}
+
+// init
+dgRenderCategories();
+</script>
+
+</body>
+</html>
