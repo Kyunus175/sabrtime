@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "SabrTime SEO Toolkit"
+version = "1.0.0"
+id = "artifacts/sabrtime-seo-toolkit"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23765
+
+[services.development]
+run = "pnpm --filter @workspace/sabrtime-seo-toolkit run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sabrtime-seo-toolkit", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sabrtime-seo-toolkit/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23765"
+BASE_PATH = "/"

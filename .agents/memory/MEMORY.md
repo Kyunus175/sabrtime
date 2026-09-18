@@ -1,0 +1,1 @@
+- [Workspace and deployment repositories](workspace-git-layout.md) — the GitHub main-site tree and local Replit artifacts use different source paths; never reset the workspace to origin/main just to sync SEO Toolkit changes.
