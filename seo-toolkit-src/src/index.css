@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -75,54 +75,54 @@
   --elevate-1: rgba(0, 0, 0, 0.03);
   --elevate-2: rgba(0, 0, 0, 0.08);
 
-  --background: 45 20% 98%;
-  --foreground: 220 25% 8%;
-  --border: 220 13% 91%;
+  --background: 40 35% 97%;
+  --foreground: 184 25% 17%;
+  --border: 35 18% 86%;
   
-  --card: 0 0% 100%;
-  --card-foreground: 220 25% 8%;
-  --card-border: 220 13% 91%;
+  --card: 40 38% 99%;
+  --card-foreground: 184 25% 17%;
+  --card-border: 35 18% 86%;
   
-  --sidebar: 0 0% 100%;
-  --sidebar-foreground: 220 25% 8%;
-  --sidebar-border: 220 13% 91%;
-  --sidebar-primary: 160 60% 35%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 210 40% 96%;
-  --sidebar-accent-foreground: 220 25% 8%;
-  --sidebar-ring: 160 60% 35%;
+  --sidebar: 40 38% 99%;
+  --sidebar-foreground: 184 25% 17%;
+  --sidebar-border: 35 18% 86%;
+  --sidebar-primary: 174 32% 31%;
+  --sidebar-primary-foreground: 40 35% 97%;
+  --sidebar-accent: 40 25% 93%;
+  --sidebar-accent-foreground: 184 25% 17%;
+  --sidebar-ring: 174 32% 31%;
   
-  --popover: 0 0% 100%;
-  --popover-foreground: 220 25% 8%;
-  --popover-border: 220 13% 91%;
+  --popover: 40 38% 99%;
+  --popover-foreground: 184 25% 17%;
+  --popover-border: 35 18% 86%;
   
-  --primary: 160 60% 35%;
-  --primary-foreground: 0 0% 100%;
+  --primary: 174 32% 31%;
+  --primary-foreground: 40 35% 97%;
   
-  --secondary: 220 15% 90%;
-  --secondary-foreground: 220 25% 8%;
+  --secondary: 40 25% 91%;
+  --secondary-foreground: 184 25% 17%;
   
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
+  --muted: 40 25% 93%;
+  --muted-foreground: 185 10% 43%;
   
-  --accent: 160 30% 95%;
-  --accent-foreground: 160 60% 20%;
+  --accent: 28 75% 92%;
+  --accent-foreground: 18 48% 27%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
   
   --input: 220 13% 91%;
-  --ring: 160 60% 35%;
+  --ring: 174 32% 31%;
   
-  --chart-1: 160 60% 35%;
-  --chart-2: 200 80% 40%;
-  --chart-3: 20 80% 50%;
-  --chart-4: 280 60% 50%;
-  --chart-5: 340 70% 50%;
+  --chart-1: 174 32% 31%;
+  --chart-2: 28 75% 52%;
+  --chart-3: 42 68% 54%;
+  --chart-4: 198 36% 45%;
+  --chart-5: 14 50% 49%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: Georgia, serif;
-  --app-font-mono: Menlo, monospace;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Fraunces', Georgia, serif;
+  --app-font-mono: 'IBM Plex Mono', Menlo, monospace;
   --radius: 0.5rem;
   
   --shadow-2xs: 0px 2px 0px 0px hsl(220 25% 8% / 0.02);
@@ -159,13 +159,13 @@
   --elevate-1: rgba(255, 255, 255, 0.04);
   --elevate-2: rgba(255, 255, 255, 0.09);
 
-  --background: 220 25% 8%;
-  --foreground: 45 20% 98%;
-  --border: 217 20% 20%;
+  --background: 184 22% 10%;
+  --foreground: 40 35% 97%;
+  --border: 184 14% 22%;
   
-  --card: 222 30% 12%;
-  --card-foreground: 45 20% 98%;
-  --card-border: 217 20% 20%;
+  --card: 184 21% 14%;
+  --card-foreground: 40 35% 97%;
+  --card-border: 184 14% 22%;
   
   --sidebar: 222 30% 12%;
   --sidebar-foreground: 45 20% 98%;
@@ -180,23 +180,23 @@
   --popover-foreground: 45 20% 98%;
   --popover-border: 217 20% 20%;
   
-  --primary: 160 60% 45%;
-  --primary-foreground: 220 25% 8%;
+  --primary: 174 36% 52%;
+  --primary-foreground: 184 22% 10%;
   
-  --secondary: 217 20% 20%;
-  --secondary-foreground: 45 20% 98%;
+  --secondary: 184 14% 22%;
+  --secondary-foreground: 40 35% 97%;
   
-  --muted: 217 25% 15%;
-  --muted-foreground: 215 20% 65%;
+  --muted: 184 18% 17%;
+  --muted-foreground: 40 12% 67%;
   
-  --accent: 217 25% 15%;
-  --accent-foreground: 45 20% 98%;
+  --accent: 18 30% 23%;
+  --accent-foreground: 40 35% 97%;
   
   --destructive: 0 62% 30%;
   --destructive-foreground: 45 20% 98%;
   
   --input: 217 20% 20%;
-  --ring: 160 60% 45%;
+  --ring: 174 36% 52%;
   
   --chart-1: 160 60% 45%;
   --chart-2: 200 80% 50%;
@@ -255,5 +255,70 @@
   .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after, .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+}
+
+@layer components {
+  .blog-eyebrow {
+    font-family: var(--app-font-mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    font-weight: 500;
+  }
+  .blog-display {
+    font-family: var(--app-font-serif);
+    letter-spacing: -0.035em;
+  }
+  .blog-paper {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.07) 0.65px, transparent 0.65px);
+    background-size: 9px 9px;
+  }
+  .blog-underline {
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary) / 0.35);
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.16em;
+  }
+  .blog-article-copy p {
+    margin: 1.15rem 0;
+    line-height: 1.85;
+  }
+  .blog-article-copy h2 {
+    font-family: var(--app-font-serif);
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin: 3.3rem 0 1rem;
+    color: hsl(var(--foreground));
+  }
+  .blog-article-copy h3 {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 2rem 0 0.7rem;
+    color: hsl(var(--foreground));
+  }
+  .blog-article-copy ul, .blog-article-copy ol {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.4rem;
+  }
+  .blog-article-copy li {
+    margin: 0.6rem 0;
+    line-height: 1.7;
+  }
+  .blog-article-copy strong { color: hsl(var(--foreground)); }
+  .blog-article-copy code {
+    font-family: var(--app-font-mono);
+    font-size: 0.82em;
+    background: hsl(var(--muted));
+    padding: 0.18em 0.4em;
+    border-radius: 0.3rem;
+  }
+  .blog-reveal {
+    animation: blog-reveal 0.65s both cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  @keyframes blog-reveal {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }

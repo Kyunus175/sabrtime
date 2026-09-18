@@ -63,7 +63,11 @@ export default function Navbar() {
                   {tools.filter((tool) => tool.category === category).map((tool) => {
                     const Icon = tool.icon;
                     return (
-                      <DropdownMenuItem key={tool.slug} onSelect={() => setLocation(`/tool/${tool.slug}`)} className="cursor-pointer">
+                      <DropdownMenuItem
+                        key={tool.slug}
+                        onSelect={() => setLocation(`/tool/${tool.slug}`)}
+                        className="cursor-pointer"
+                      >
                         <Icon className="text-primary" />
                         <span>{tool.name}</span>
                       </DropdownMenuItem>
@@ -73,6 +77,10 @@ export default function Navbar() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <a href="https://sabrtime.in/blog/" target="_blank" rel="noopener noreferrer" className="hidden rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground sm:flex" data-testid="link-sabrtime-blog">
+            SabrTime Blog
+          </a>
 
           <Popover open={searchOpen} onOpenChange={setSearchOpen}>
             <PopoverTrigger asChild>

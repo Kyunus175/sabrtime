@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://sabrtime.in/seo-tools/sitemap.xml

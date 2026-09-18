@@ -50,6 +50,7 @@ export default function Footer() {
           <div>&copy; {currentYear} SabrTime. All rights reserved.</div>
           <div className="flex items-center gap-4">
             <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+            <a href="https://sabrtime.in/blog/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" data-testid="link-footer-sabrtime-blog">SabrTime Blog</a>
             <a href="https://sabrtime.in/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Privacy Policy</a>
             <a href="https://sabrtime.in/terms" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Terms of Service</a>
           </div>
