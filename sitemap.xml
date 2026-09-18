@@ -246,6 +246,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sabrtime.in/blog/seo-for-beginners-a-small-site-first-approach.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sabrtime.in/blog/how-to-write-meta-titles-and-descriptions-that-earn-clicks.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sabrtime.in/blog/on-page-seo-checklist-for-a-new-blog-post.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sabrtime.in/blog/what-schema-markup-does-for-a-small-website.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sabrtime.in/blog/category/qibla.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
