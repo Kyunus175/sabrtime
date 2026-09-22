@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SEO Tools Blog — Practical SEO Guidance for Small Sites | SabrTime</title>
+<meta name="description" content="Free, practical SEO guides for small sites and new blogs — on-page checklists, meta titles, schema markup, and a small-site-first approach to getting found." />
+<link rel="canonical" href="https://sabrtime.in/seo-tools/blog/" />
+<meta property="og:title" content="SEO Tools Blog — Practical SEO Guidance for Small Sites" />
+<meta property="og:description" content="Free, practical SEO guides for small sites and new blogs — on-page checklists, meta titles, schema markup, and more." />
+<meta property="og:url" content="https://sabrtime.in/seo-tools/blog/" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/blog/assets/blog-style.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "SabrTime SEO Tools Blog",
+  "url": "https://sabrtime.in/seo-tools/blog/",
+  "description": "Free, practical SEO guides for small sites and new blogs.",
+  "publisher": {"@type": "Organization", "name": "SabrTime", "url": "https://sabrtime.in/"}
+}
+</script>
+<style>
+  .blog-hero{text-align:center; padding:44px 20px 20px}
+  .blog-hero .header-ornament{font-size:15px; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; font-weight:700; display:block; margin-bottom:10px;}
+  .blog-hero .hero-svg{width:120px; height:120px; margin:0 auto 8px; display:block;}
+  .blog-hero h1{font-family:'Amiri', serif; font-size:32px; font-weight:700; margin:6px 0 10px; color:var(--ink)}
+  .blog-hero p{font-style:italic; color:var(--ink-soft); font-size:17px; max-width:460px; margin:0 auto}
+  .blog-hero .home-link{display:inline-block; margin-top:20px; font-size:14px; font-weight:700; color:var(--teal); border:1.5px solid var(--line-gold); padding:8px 20px; border-radius:24px; background:var(--card-bg);}
+
+  .blog-search{position:relative; margin:28px 0 6px;}
+  .blog-search input{
+    width:100%; box-sizing:border-box; font-family:'Cormorant Garamond',Georgia,serif; font-size:17px;
+    padding:12px 44px 12px 18px; border-radius:24px; border:1.5px solid var(--line,rgba(201,150,58,.35));
+    background:var(--card-bg,rgba(255,252,245,.88)); color:var(--ink,#1a1208); outline:none;
+    transition:border-color .15s;
+  }
+  .blog-search input:focus{border-color:var(--gold,#c9963a)}
+  .blog-search .search-icon{
+    position:absolute; right:16px; top:50%; transform:translateY(-50%); font-size:16px; pointer-events:none; opacity:.6;
+  }
+  .search-empty{display:none; text-align:center; padding:28px 20px; color:var(--ink-soft,#3d2f1a); font-style:italic; font-size:16px;}
+  .search-count{text-align:center; font-size:13px; color:var(--ink-soft,#3d2f1a); margin:-2px 0 18px; display:none;}
+  .post-card.is-hidden{display:none}
+
+  .cluster-nav{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:0 0 26px}
+  .cluster-pill{
+    cursor:pointer; user-select:none; font-size:13px; font-weight:700; color:var(--ink-soft); background:var(--card-bg);
+    border:1px solid var(--line); padding:6px 14px; border-radius:20px; transition:all .15s;
+  }
+  .cluster-pill.is-active{background:var(--gold,#c9963a); color:#fff; border-color:var(--gold,#c9963a)}
+
+  .seo-icon-wrap{position:relative}
+  .seo-icon-wrap .pulse-ring{
+    position:absolute; inset:-4px; border-radius:12px; border:1.5px solid var(--gold);
+    opacity:0; animation:seoPulse 2.8s ease-out infinite;
+  }
+  .post-card:nth-child(1) .pulse-ring{animation-delay:0s}
+  .post-card:nth-child(2) .pulse-ring{animation-delay:.4s}
+  .post-card:nth-child(3) .pulse-ring{animation-delay:.8s}
+  .post-card:nth-child(4) .pulse-ring{animation-delay:1.2s}
+  @keyframes seoPulse{
+    0%{opacity:.55; transform:scale(1);}
+    100%{opacity:0; transform:scale(1.35);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pulse-ring{animation:none; display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://sabrtime.in/" class="brand-mini"><span class="brand-mark">✦</span> SabrTime</a>
+    <nav>
+      <a href="/blog/">Blog</a>
+      <a href="/seo-tools/">SEO Tools</a>
+      <a href="https://sabrtime.in/">App</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://sabrtime.in/">SabrTime</a>
+    <span class="sep">/</span>
+    <a href="/seo-tools/">SEO Tools</a>
+    <span class="sep">/</span>
+    <span class="current">Blog</span>
+  </nav>
+
+  <div class="blog-hero">
+    <span class="header-ornament">Practical · Small-Site-First</span>
+    <svg class="hero-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="60" cy="60" r="56" fill="var(--teal-pale,#d4eeee)"/>
+      <polyline points="30,72 46,56 58,64 84,38" stroke="var(--teal,#2d6b6b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <polyline points="70,38 84,38 84,52" stroke="var(--teal,#2d6b6b)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="52" cy="58" r="17" stroke="var(--gold,#c9963a)" stroke-width="4.5" fill="rgba(255,252,245,.9)"/>
+      <line x1="64" y1="70" x2="78" y2="84" stroke="var(--gold,#c9963a)" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <h1>SEO Tools Blog</h1>
+    <p>Practical, small-site-first SEO guidance — no jargon, no chasing every ranking signal at once.</p>
+    <a class="home-link" href="/seo-tools/">← Back to SEO Tools</a>
+  </div>
+
+  <div class="blog-search">
+    <input type="text" id="blogSearchInput" placeholder="Search guides — e.g. schema, meta titles, checklist..." aria-label="Search SEO blog articles" autocomplete="off" />
+    <span class="search-icon">🔍</span>
+  </div>
+  <div class="search-count" id="searchCount"></div>
+
+  <div class="cluster-nav" id="clusterNav">
+    <span class="cluster-pill" data-filter="all">✦ All</span>
+    <span class="cluster-pill" data-filter="getting started">🧭 Getting Started</span>
+    <span class="cluster-pill" data-filter="on-page">📝 On-Page</span>
+    <span class="cluster-pill" data-filter="technical">🧩 Technical</span>
+  </div>
+
+  <div class="post-list" id="postList">
+
+    <a class="post-card" href="/seo-tools/blog/seo-for-beginners-a-small-site-first-approach.html">
+      <div class="post-icon seo-icon-wrap"><span class="pulse-ring"></span>🧭</div>
+      <div class="post-body">
+        <div class="post-cat">Getting Started</div>
+        <div class="post-title">SEO for Beginners: A Small-Site-First Approach</div>
+        <div class="post-desc">A grounded way to make your first pages discoverable without chasing every ranking signal at once.</div>
+      </div>
+      <div class="post-arrow">›</div>
+    </a>
+
+    <a class="post-card" href="/seo-tools/blog/on-page-seo-checklist-for-a-new-blog-post.html">
+      <div class="post-icon seo-icon-wrap"><span class="pulse-ring"></span>✅</div>
+      <div class="post-body">
+        <div class="post-cat">On-Page SEO</div>
+        <div class="post-title">The On-Page SEO Checklist for a New Blog Post</div>
+        <div class="post-desc">A calm last-hour checklist for publishing a useful, readable, technically sound article.</div>
+      </div>
+      <div class="post-arrow">›</div>
+    </a>
+
+    <a class="post-card" href="/seo-tools/blog/how-to-write-meta-titles-and-descriptions-that-earn-clicks.html">
+      <div class="post-icon seo-icon-wrap"><span class="pulse-ring"></span>✍️</div>
+      <div class="post-body">
+        <div class="post-cat">On-Page SEO</div>
+        <div class="post-title">How to Write Meta Titles and Descriptions That Earn the Click</div>
+        <div class="post-desc">A practical guide to the small pieces of copy that frame your page in search results.</div>
+      </div>
+      <div class="post-arrow">›</div>
+    </a>
+
+    <a class="post-card" href="/seo-tools/blog/what-schema-markup-does-for-a-small-website.html">
+      <div class="post-icon seo-icon-wrap"><span class="pulse-ring"></span>🧩</div>
+      <div class="post-body">
+        <div class="post-cat">Technical SEO</div>
+        <div class="post-title">What Schema Markup Does for a Small Website</div>
+        <div class="post-desc">Understand JSON-LD, rich results, and when structured data is worth the effort.</div>
+      </div>
+      <div class="post-arrow">›</div>
+    </a>
+
+  </div>
+
+  <div class="search-empty" id="searchEmpty">No guides match your search. Try a different word — or browse by category above.</div>
+
+</div>
+
+<footer class="site-footer">
+  SabrTime SEO Tools — Free, practical SEO guidance · <a href="/seo-tools/">sabrtime.in/seo-tools</a> · <a href="/blog/">SabrTime Islamic Blog</a>
+</footer>
+
+<script>
+(function () {
+  var input = document.getElementById('blogSearchInput');
+  var posts = Array.prototype.slice.call(document.querySelectorAll('#postList .post-card'));
+  var pills = Array.prototype.slice.call(document.querySelectorAll('#clusterNav .cluster-pill'));
+  var emptyMsg = document.getElementById('searchEmpty');
+  var countEl = document.getElementById('searchCount');
+  var activeFilter = 'all';
+
+  if (!input || !emptyMsg || !countEl || posts.length === 0) {
+    console.error('SabrTime SEO blog search: missing required element(s) — search bar will not work.', {
+      input: !!input, emptyMsg: !!emptyMsg, countEl: !!countEl, postCount: posts.length
+    });
+    return;
+  }
+
+  posts.forEach(function (card) {
+    var title = card.querySelector('.post-title');
+    var desc = card.querySelector('.post-desc');
+    var cat = card.querySelector('.post-cat');
+    card.dataset.search = [
+      title ? title.textContent : '',
+      desc ? desc.textContent : '',
+      cat ? cat.textContent : ''
+    ].join(' ').toLowerCase();
+    card.dataset.category = cat ? cat.textContent.toLowerCase() : '';
+  });
+
+  function applyFilters() {
+    var query = input.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    posts.forEach(function (card) {
+      var matchesQuery = query === '' || card.dataset.search.indexOf(query) !== -1;
+      var matchesCategory = activeFilter === 'all' || card.dataset.category.indexOf(activeFilter) !== -1;
+      var show = matchesQuery && matchesCategory;
+      card.classList.toggle('is-hidden', !show);
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+
+    if (query !== '') {
+      countEl.style.display = 'block';
+      countEl.textContent = visibleCount + (visibleCount === 1 ? ' guide found' : ' guides found');
+    } else {
+      countEl.style.display = 'none';
+    }
+  }
+
+  input.addEventListener('input', applyFilters);
+
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      pills.forEach(function (p) { p.classList.remove('is-active'); });
+      pill.classList.add('is-active');
+      activeFilter = pill.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  var allPill = document.querySelector('#clusterNav .cluster-pill[data-filter="all"]');
+  if (allPill) allPill.classList.add('is-active');
+})();
+</script>
+
+</body>
+</html>
